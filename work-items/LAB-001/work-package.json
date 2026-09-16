@@ -1,0 +1,218 @@
+{
+  "id": "LAB-001",
+  "title": "Employee equipment return workflow",
+  "state": "blocked",
+  "human_gate": false,
+  "created_at": "2026-09-16T03:30:41.268294+00:00",
+  "updated_at": "2026-09-16T04:06:23.900637+00:00",
+  "links": {
+    "servicenow_intake": null,
+    "ado_work_item": null,
+    "github_branch": null,
+    "github_pr": null,
+    "change_request": null,
+    "release": null
+  },
+  "classifications": {
+    "architecture_impact": "unknown",
+    "integration_impact": "unknown",
+    "code_impact": "unknown",
+    "security_impact": "unknown",
+    "documentation_impact": "unknown",
+    "adr_required": "review"
+  },
+  "evidence": {
+    "requirements": "work-items/LAB-001/requirements.md",
+    "architecture_review": "work-items/LAB-001/architecture-review.md",
+    "implementation_plan": "work-items/LAB-001/implementation-plan.md",
+    "test_plan": null,
+    "pr_review": null,
+    "change_readiness": null,
+    "release_manifest": null,
+    "as_built": null
+  },
+  "history": [
+    {
+      "at": "2026-09-16T03:30:41.268294+00:00",
+      "event": "work_package_created",
+      "details": {}
+    },
+    {
+      "at": "2026-09-16T03:30:58.245492+00:00",
+      "event": "agent_dispatch",
+      "details": {
+        "role": "intake-analyst",
+        "provider": "manual",
+        "result": {
+          "mode": "manual",
+          "provider": "manual",
+          "prompt_file": "runs\\LAB-001\\intake_received--intake-analyst--manual.md"
+        }
+      }
+    },
+    {
+      "at": "2026-09-16T03:33:35.498479+00:00",
+      "event": "state_transition",
+      "details": {
+        "from": "intake_received",
+        "to": "requirements_ready",
+        "human_approved": false
+      }
+    },
+    {
+      "at": "2026-09-16T03:39:41.889918+00:00",
+      "event": "state_transition",
+      "details": {
+        "from": "requirements_ready",
+        "to": "architecture_required",
+        "human_approved": false
+      }
+    },
+    {
+      "at": "2026-09-16T03:40:03.781592+00:00",
+      "event": "agent_dispatch",
+      "details": {
+        "role": "servicenow-architect",
+        "provider": "manual",
+        "result": {
+          "mode": "manual",
+          "provider": "manual",
+          "prompt_file": "runs\\LAB-001\\architecture_required--servicenow-architect--manual.md"
+        }
+      }
+    },
+    {
+      "at": "2026-09-16T03:49:29.649764+00:00",
+      "event": "state_transition",
+      "details": {
+        "from": "architecture_required",
+        "to": "human_architecture_review",
+        "human_approved": false
+      }
+    },
+    {
+      "at": "2026-09-16T03:50:40.854632+00:00",
+      "event": "state_transition",
+      "details": {
+        "from": "human_architecture_review",
+        "to": "architecture_complete",
+        "human_approved": true
+      }
+    },
+    {
+      "at": "2026-09-16T03:51:22.156603+00:00",
+      "event": "state_transition",
+      "details": {
+        "from": "architecture_complete",
+        "to": "backlog_draft",
+        "human_approved": false
+      }
+    },
+    {
+      "at": "2026-09-16T03:53:16.493481+00:00",
+      "event": "agent_dispatch",
+      "details": {
+        "role": "backlog-engineer",
+        "provider": "manual",
+        "result": {
+          "mode": "manual",
+          "provider": "manual",
+          "prompt_file": "runs\\LAB-001\\backlog_draft--backlog-engineer--manual.md"
+        }
+      }
+    },
+    {
+      "at": "2026-09-16T03:56:46.411029+00:00",
+      "event": "state_transition",
+      "details": {
+        "from": "backlog_draft",
+        "to": "backlog_ready",
+        "human_approved": true
+      }
+    },
+    {
+      "at": "2026-09-16T03:57:17.881147+00:00",
+      "event": "agent_dispatch",
+      "details": {
+        "role": "portfolio-advisor",
+        "provider": "manual",
+        "result": {
+          "mode": "manual",
+          "provider": "manual",
+          "prompt_file": "runs\\LAB-001\\backlog_ready--portfolio-advisor--manual.md"
+        }
+      }
+    },
+    {
+      "at": "2026-09-16T03:59:29.598192+00:00",
+      "event": "state_transition",
+      "details": {
+        "from": "backlog_ready",
+        "to": "priority_review",
+        "human_approved": false
+      }
+    },
+    {
+      "at": "2026-09-16T04:00:17.904985+00:00",
+      "event": "state_transition",
+      "details": {
+        "from": "priority_review",
+        "to": "sprint_ready",
+        "human_approved": true
+      }
+    },
+    {
+      "at": "2026-09-16T04:00:43.416951+00:00",
+      "event": "state_transition",
+      "details": {
+        "from": "sprint_ready",
+        "to": "implementation_planning",
+        "human_approved": false
+      }
+    },
+    {
+      "at": "2026-09-16T04:01:22.248502+00:00",
+      "event": "agent_dispatch",
+      "details": {
+        "role": "implementation-planner",
+        "provider": "manual",
+        "result": {
+          "mode": "manual",
+          "provider": "manual",
+          "prompt_file": "runs\\LAB-001\\implementation_planning--implementation-planner--manual.md"
+        }
+      }
+    },
+    {
+      "at": "2026-09-16T04:04:35.608634+00:00",
+      "event": "state_transition",
+      "details": {
+        "from": "implementation_planning",
+        "to": "implementation",
+        "human_approved": true
+      }
+    },
+    {
+      "at": "2026-09-16T04:05:02.182598+00:00",
+      "event": "agent_dispatch",
+      "details": {
+        "role": "developer",
+        "provider": "manual",
+        "result": {
+          "mode": "manual",
+          "provider": "manual",
+          "prompt_file": "runs\\LAB-001\\implementation--developer--manual.md"
+        }
+      }
+    },
+    {
+      "at": "2026-09-16T04:06:23.900637+00:00",
+      "event": "state_transition",
+      "details": {
+        "from": "implementation",
+        "to": "blocked",
+        "human_approved": false
+      }
+    }
+  ]
+}
