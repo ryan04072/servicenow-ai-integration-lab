@@ -1,0 +1,28 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
+dist/
+build/
+coverage/
+.DS_Store
+Thumbs.db
+
+# Local provider/auth configuration
+config/providers/providers.local.json
+config/mcp/*.local.json
+.secrets/
+.credentials/
+
+# Generated run output
+runs/
+repository-inventory.json
+repository-audit-coverage.md
+
+# Local ServiceNow SDK / auth artifacts if generated
+.now/
+.servicenow/

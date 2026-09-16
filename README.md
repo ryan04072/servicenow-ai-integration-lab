@@ -1,263 +1,147 @@
-# 👋 Ryan Reese
+# ServiceNow Agentic Engineering Home Lab
 
-### ServiceNow Developer | AI • Automation • Integrations • Enterprise Architecture
+A portable, professional-grade home lab for learning and demonstrating:
 
-I specialize in designing ServiceNow solutions that combine workflow automation, enterprise integrations, AI-enabled experiences, and maintainable platform architecture.
+- ServiceNow administration, development, and architecture
+- ServiceNow SDK / Fluent development
+- Git / GitHub / pull-request workflows
+- Azure DevOps planning integration
+- AI-agent orchestration
+- multi-provider engineering with GitHub Copilot, Claude Code, Codex, and Gemini
+- risk-based testing and ATF planning
+- DevOps Change Velocity / CAB evidence handoff
+- release traceability and as-built documentation
+- human-in-the-loop AI governance
 
-This GitHub portfolio contains independently developed lab projects and generalized technical case studies demonstrating ServiceNow development and architecture patterns.
+## Repository Name
+
+Recommended GitHub repository name:
+
+```text
+servicenow-agentic-engineering-lab
+```
+
+Recommended description:
+
+> Multi-model ServiceNow engineering lab for agentic SDLC, SDK/Fluent development, GitHub/ADO orchestration, testing, change governance, and human-in-the-loop automation.
+
+Keep the repository **private while building it**. Publish only sanitized portfolio projects later.
 
 ---
 
-## 🧠 Current Focus
+# Start Here
 
-```text
-ServiceNow AI
-Now Assist / AI Agents
-Enterprise Integrations
-REST APIs
-OAuth 2.0
-Microsoft Graph
-Entra ID
-Intune
-Microsoft Teams / Copilot
-GitHub / DevOps
-Flow Designer
-Workflow Studio
-JavaScript
+Read these in order:
+
+1. [`docs/00-QUICKSTART.md`](docs/00-QUICKSTART.md)
+2. [`docs/01-TARGET_ARCHITECTURE.md`](docs/01-TARGET_ARCHITECTURE.md)
+3. [`docs/02-IMPLEMENTATION_ROADMAP.md`](docs/02-IMPLEMENTATION_ROADMAP.md)
+4. [`docs/03-IMPLEMENTATION_RUNBOOK.md`](docs/03-IMPLEMENTATION_RUNBOOK.md)
+5. [`docs/04-LIFECYCLE_AND_EVIDENCE_MODEL.md`](docs/04-LIFECYCLE_AND_EVIDENCE_MODEL.md)
+6. [`docs/05-AGENT_CATALOG.md`](docs/05-AGENT_CATALOG.md)
+7. [`docs/06-PROVIDER_STRATEGY.md`](docs/06-PROVIDER_STRATEGY.md)
+8. [`docs/07-SERVICENOW_TOOLCHAIN.md`](docs/07-SERVICENOW_TOOLCHAIN.md)
+9. [`docs/08-DEVOPS_CHANGE_VELOCITY.md`](docs/08-DEVOPS_CHANGE_VELOCITY.md)
+10. [`docs/09-EVALUATION_STRATEGY.md`](docs/09-EVALUATION_STRATEGY.md)
+
+Then run:
+
+```bash
+python scripts/validate_repo.py
+python scripts/new_work_package.py LAB-001 "Build first scoped SDK app"
+python -m orchestrator.cli status work-items/LAB-001/work-package.json
 ```
 
 ---
 
-# Featured Projects
+# What Already Exists in Your Home Environment
 
-| Project            | Technologies                       | Focus                        |
-| ------------------ | ---------------------------------- | ---------------------------- |
-| **[Project Name]** | ServiceNow, Microsoft Graph, Entra | Secure identity automation   |
-| **[Project Name]** | ServiceNow, GitHub, Webhooks       | DevOps integration           |
-| **[Project Name]** | ServiceNow, Intune, Graph          | Device/compliance automation |
-| **[Project Name]** | Now Assist, Workflow Studio        | AI orchestration             |
-| **[Project Name]** | ServiceNow REST APIs               | Integration engineering      |
+This starter assumes:
+
+- your ServiceNow PDI is already integrated with GitHub,
+- ServiceNow is already creating Azure DevOps work items/stories,
+- VS Code is your primary local editor,
+- you have GitHub Copilot,
+- you have Claude Code,
+- you have ChatGPT/Codex access,
+- you have Gemini access.
+
+This repository does not replace those integrations. It adds the control plane around them.
 
 ---
 
-# 🏗️ Architecture Philosophy
-
-I design ServiceNow solutions around several principles:
-
-### OOB First
-
-Use supported platform capabilities where they meet the requirement.
-
-### Reusable Business Capabilities
-
-Business processes are implemented as reusable flows, subflows, actions, and services rather than being tightly coupled to a single interface.
-
-### Integration Abstraction
-
-External integrations are isolated from business and presentation logic.
-
-### Deterministic Security
-
-Authorization, identity validation, approvals, and sensitive actions remain deterministic.
-
-### AI as an Orchestration Layer
-
-Generative AI is used for reasoning, summarization, intent understanding, and tool selection.
-
-AI does not replace enterprise authorization, security policy, or system-of-record controls.
-
-### Low Technical Debt
-
-Solutions emphasize:
+# Target Lifecycle
 
 ```text
-Maintainability
-Upgradeability
-Reusability
-Observability
-Security
-Testability
-Clear ownership boundaries
+ServiceNow Intake
+    ↓
+Azure DevOps work item
+    ↓
+AI intake / grooming
+    ↓
+Human requirement review
+    ↓
+Architecture agent
+    ↓
+Human architecture gate
+    ↓
+Implementation planning
+    ↓
+Code / ServiceNow native configuration
+    ↓
+GitHub branch + PR
+    ↓
+Code / PR review
+    ↓
+Automated + manual testing
+    ↓
+DevOps Change Velocity / change evidence
+    ↓
+CAB / human approval
+    ↓
+Scheduled / deployment
+    ↓
+Post-release validation
+    ↓
+As-built documentation PR
+    ↓
+Human merge
 ```
 
 ---
 
-# 🔌 Integration Lab
+# Portable Architecture
 
-My personal development environment includes:
-
-```text
-ServiceNow PDI
-        │
-        ├── Microsoft Graph
-        │      ├── Entra ID
-        │      ├── Intune
-        │      └── Teams
-        │
-        ├── GitHub
-        │      ├── REST API
-        │      ├── GraphQL
-        │      ├── Webhooks
-        │      └── GitHub Actions
-        │
-        └── Lab Infrastructure
-               ├── Cloudflare
-               └── n8n
-```
-
-The lab uses synthetic users, devices, applications, and enterprise data.
-
----
-
-# 🧪 Integration Engineering Topics
-
-Projects in this portfolio demonstrate patterns including:
-
-* REST API development
-* OAuth 2.0
-* API authentication
-* Microsoft Graph
-* inbound webhooks
-* Scripted REST APIs
-* Flow Designer actions
-* RESTMessageV2
-* asynchronous integrations
-* webhook signature validation
-* idempotency
-* retry strategies
-* API pagination
-* rate limiting
-* structured error handling
-* integration logging
-* least-privilege permissions
-* event-driven architecture
-* GraphQL
-* AI tool orchestration
-
----
-
-# 🤖 ServiceNow AI
-
-My AI work focuses on exposing secure, deterministic enterprise capabilities to conversational and agentic experiences.
-
-Reference pattern:
+The canonical, vendor-neutral layer is:
 
 ```text
-User
- ↓
-AI Experience
- ↓
-AI Skill / Agent Tool
- ↓
-Reusable ServiceNow Capability
- ↓
-Integration Layer
- ↓
-Enterprise System
+AGENTS.md
+agents/roles/
+.agents/skills/
+schemas/
+config/
+docs/
+orchestrator/
+evals/
 ```
 
-Examples include:
-
-* account recovery
-* identity automation
-* device remediation
-* catalog/service automation
-* incident enrichment
-* DevOps workflow orchestration
-* enterprise knowledge retrieval
-
----
-
-# 📚 Selected Case Studies
-
-## [Case Study Name]
-
-**Problem:**
-[Describe the enterprise problem.]
-
-**Architecture:**
-[Brief architecture description.]
-
-**ServiceNow:**
-[Flows, APIs, scripts, AI tools, etc.]
-
-**External Platform:**
-[Microsoft / GitHub / other.]
-
-**Key Engineering Topics:**
-[OAuth, webhooks, security, idempotency, etc.]
-
-**Repository:**
-[Link]
-
----
-
-# 🛠️ Core Technologies
-
-### ServiceNow
+Provider adapters are intentionally thin:
 
 ```text
-JavaScript
-Flow Designer
-Workflow Studio
-Script Includes
-Business Rules
-Scripted REST APIs
-RESTMessageV2
-IntegrationHub
-Decision Tables
-Employee Center
-Virtual Agent
-Now Assist
-AI Agents
-AI Search
-ITSM
-ITOM
-CMDB
-HAM / SAM
+.github/
+.claude/
+.gemini/
 ```
 
-### Integration / Cloud
-
-```text
-Microsoft Graph
-Microsoft Entra ID
-Microsoft Intune
-Microsoft Teams
-Microsoft Copilot
-REST
-OAuth 2.0
-JSON
-Webhooks
-GraphQL
-GitHub APIs
-Cloudflare
-n8n
-```
+The engineering system should survive changing model vendors.
 
 ---
 
-# 📜 Certifications
+# Safety / Human-in-the-Loop
 
-* [ServiceNow Expert AI System Administrator]
-* [Certification]
-* [Certification]
-* [Certification in progress]
+Even in a home lab:
 
----
-
-# 🎯 Professional Direction
-
-My current technical focus is building expertise at the intersection of:
-
-> **ServiceNow + Enterprise Integration + AI + Automation**
-
-I am particularly interested in solutions where AI is used to intelligently orchestrate secure enterprise workflows rather than replace deterministic platform controls.
-
----
-
-# 📫 Connect
-
-**LinkedIn:** [URL]
-**Portfolio:** [URL]
-**GitHub:** [URL]
+- AI can analyze, plan, write code, create tests, and draft documentation.
+- Human approval is required for architecture acceptance, destructive PDI changes, merge to main, credential changes, and final release acceptance.
+- External/community skills are reviewed before they receive secrets or write permissions.
+- Employer proprietary material must never be copied into this repository.

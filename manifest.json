@@ -1,0 +1,20 @@
+{
+  "package": "ServiceNow Agentic Engineering Home Lab \u2014 Full Starter",
+  "version": "1.0.0",
+  "generated_date": "2026-09-15",
+  "recommended_repo_name": "servicenow-agentic-engineering-lab",
+  "providers": [
+    "GitHub Copilot",
+    "Claude Code",
+    "OpenAI Codex",
+    "Gemini"
+  ],
+  "existing_integrations_assumed": [
+    "ServiceNow PDI \u2194 GitHub",
+    "ServiceNow intake \u2192 Azure DevOps work item"
+  ],
+  "human_in_the_loop": true,
+  "canonical_roles": 13,
+  "canonical_skills": 9,
+  "golden_tasks": 6
+}
