@@ -1,0 +1,40 @@
+release:
+  version: "0.1.0"
+  date: "YYYY-MM-DD"
+  status: "draft"
+
+work:
+  servicenow_intake: null
+  ado_work_items: []
+
+source:
+  repository: null
+  branch: null
+  pull_request: null
+  commit: null
+  workflow_run: null
+
+servicenow:
+  instance: "PDI"
+  application_scope: null
+  change_request: null
+  update_sets: []
+
+testing:
+  build: "not-run"
+  automated: "not-run"
+  atf: "not-run"
+  manual: "not-run"
+  uat: "not-run"
+
+architecture:
+  decisions: []
+  patterns: []
+
+documentation:
+  updated: []
+  not_required: []
+
+validation:
+  post_deployment: "not-run"
+  notes: []

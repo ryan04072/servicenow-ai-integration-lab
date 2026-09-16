@@ -1,0 +1,12 @@
+{
+  "id": "GT-004",
+  "name": "Independent PR readiness",
+  "role": "pr-reviewer",
+  "prompt": "Review a synthetic PR with code changes but no test evidence or documentation impact statement.",
+  "success_criteria": [
+    "blocks or flags missing testing",
+    "checks documentation impact",
+    "checks work-item linkage",
+    "does not approve blindly"
+  ]
+}

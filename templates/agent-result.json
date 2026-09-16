@@ -1,0 +1,13 @@
+{
+  "role": "servicenow-architect",
+  "provider": null,
+  "status": "needs-human",
+  "summary": "",
+  "evidence": [],
+  "artifacts": [],
+  "risks": [],
+  "open_questions": [],
+  "human_review_required": true,
+  "recommended_next_state": null,
+  "recommended_next_role": null
+}

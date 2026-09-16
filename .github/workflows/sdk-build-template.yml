@@ -1,0 +1,25 @@
+name: SDK Build Template
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'labs/**'
+      - 'projects/**'
+
+jobs:
+  discover-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Locate Node projects
+        shell: bash
+        run: |
+          find labs projects -name package.json -print 2>/dev/null || true
+
+      - name: Guidance
+        run: |
+          echo "This workflow is a starter."
+          echo "Add a job per SDK project once its package scripts and supported Node/SDK versions are established."
+          echo "Do not guess SDK deployment commands in CI until the local PDI proof of concept is stable."

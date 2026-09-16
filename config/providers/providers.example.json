@@ -1,0 +1,97 @@
+{
+  "default_mode": "manual",
+  "providers": {
+    "manual": {
+      "enabled": true,
+      "description": "Generate prompt/artifact for manual invocation in the selected provider."
+    },
+    "copilot": {
+      "enabled": false,
+      "description": "Enable after validating your installed Copilot CLI/client invocation.",
+      "command": null
+    },
+    "claude": {
+      "enabled": false,
+      "description": "Enable after validating your installed Claude Code invocation.",
+      "command": null
+    },
+    "codex": {
+      "enabled": false,
+      "description": "Enable after validating your installed Codex CLI invocation.",
+      "command": null
+    },
+    "gemini": {
+      "enabled": false,
+      "description": "Enable after validating your installed Gemini CLI invocation.",
+      "command": null
+    }
+  },
+  "routing": {
+    "intake-analyst": [
+      "copilot",
+      "claude",
+      "manual"
+    ],
+    "servicenow-architect": [
+      "claude",
+      "copilot",
+      "codex",
+      "manual"
+    ],
+    "backlog-engineer": [
+      "copilot",
+      "claude",
+      "manual"
+    ],
+    "portfolio-advisor": [
+      "copilot",
+      "claude",
+      "manual"
+    ],
+    "implementation-planner": [
+      "claude",
+      "codex",
+      "copilot",
+      "manual"
+    ],
+    "developer": [
+      "claude",
+      "codex",
+      "copilot",
+      "manual"
+    ],
+    "code-reviewer": [
+      "codex",
+      "gemini",
+      "copilot",
+      "manual"
+    ],
+    "pr-reviewer": [
+      "copilot",
+      "codex",
+      "gemini",
+      "manual"
+    ],
+    "test-engineer": [
+      "gemini",
+      "claude",
+      "copilot",
+      "manual"
+    ],
+    "documentation-engineer": [
+      "copilot",
+      "claude",
+      "manual"
+    ],
+    "change-prep": [
+      "copilot",
+      "claude",
+      "manual"
+    ],
+    "release-validator": [
+      "gemini",
+      "copilot",
+      "manual"
+    ]
+  }
+}

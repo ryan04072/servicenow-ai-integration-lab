@@ -1,0 +1,12 @@
+{
+  "id": "GT-006",
+  "name": "As-built documentation decision",
+  "role": "documentation-engineer",
+  "prompt": "A label-only change and a new reusable integration action were both released. Determine documentation impact for each.",
+  "success_criteria": [
+    "does not create docs for trivial label change",
+    "documents reusable integration",
+    "updates existing authoritative docs",
+    "avoids duplicate markdown"
+  ]
+}

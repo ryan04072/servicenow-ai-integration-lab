@@ -1,0 +1,192 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ServiceNow Work Package",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "state",
+    "human_gate",
+    "links",
+    "evidence"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "human_gate": {
+      "type": "boolean"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "servicenow_intake": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ado_work_item": {
+          "type": [
+            "string",
+            "integer",
+            "null"
+          ]
+        },
+        "github_branch": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "github_pr": {
+          "type": [
+            "string",
+            "integer",
+            "null"
+          ]
+        },
+        "change_request": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "release": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "classifications": {
+      "type": "object",
+      "properties": {
+        "architecture_impact": {
+          "enum": [
+            "none",
+            "low",
+            "significant",
+            "unknown"
+          ]
+        },
+        "integration_impact": {
+          "enum": [
+            "none",
+            "existing",
+            "new",
+            "unknown"
+          ]
+        },
+        "code_impact": {
+          "enum": [
+            "none",
+            "config",
+            "script",
+            "sdk",
+            "unknown"
+          ]
+        },
+        "security_impact": {
+          "enum": [
+            "none",
+            "low",
+            "significant",
+            "unknown"
+          ]
+        },
+        "documentation_impact": {
+          "enum": [
+            "none",
+            "update",
+            "new",
+            "unknown"
+          ]
+        },
+        "adr_required": {
+          "enum": [
+            "yes",
+            "no",
+            "review"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "requirements": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "architecture_review": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "implementation_plan": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "test_plan": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pr_review": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "change_readiness": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "release_manifest": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "as_built": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "history": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "additionalProperties": true
+}

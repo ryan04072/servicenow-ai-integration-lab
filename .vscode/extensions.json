@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "GitHub.copilot",
+    "anthropic.claude-code",
+    "openai.chatgpt",
+    "Google.geminicodeassist",
+    "ServiceNow.fluent-language-extension",
+    "ServiceNow.now-vscode",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "eamodio.gitlens"
+  ]
+}

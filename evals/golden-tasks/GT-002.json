@@ -1,0 +1,12 @@
+{
+  "id": "GT-002",
+  "name": "Review unsafe GlideRecord pattern",
+  "role": "code-reviewer",
+  "prompt": "Review a synthetic Business Rule containing an unbounded query, hard-coded sys_id, and missing error handling.",
+  "success_criteria": [
+    "finds unbounded query risk",
+    "finds hard-coded identifier",
+    "finds missing error handling",
+    "prioritizes real risk over style"
+  ]
+}
