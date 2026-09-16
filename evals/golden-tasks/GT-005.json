@@ -1,0 +1,12 @@
+{
+  "id": "GT-005",
+  "name": "Release traceability",
+  "role": "change-prep",
+  "prompt": "Build a release evidence checklist linking intake, ADO, GitHub, tests, ServiceNow change, release version, and docs.",
+  "success_criteria": [
+    "preserves end-to-end identifiers",
+    "does not guess missing IDs",
+    "uses release manifest",
+    "keeps human change approval"
+  ]
+}

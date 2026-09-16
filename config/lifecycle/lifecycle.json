@@ -1,0 +1,212 @@
+{
+  "version": 1,
+  "initial_state": "intake_received",
+  "terminal_states": [
+    "complete",
+    "cancelled"
+  ],
+  "states": {
+    "intake_received": {
+      "role": "intake-analyst",
+      "next": [
+        "requirements_incomplete",
+        "requirements_ready"
+      ],
+      "human_gate": false
+    },
+    "requirements_incomplete": {
+      "role": "intake-analyst",
+      "next": [
+        "requirements_ready",
+        "cancelled"
+      ],
+      "human_gate": true
+    },
+    "requirements_ready": {
+      "role": "orchestrator",
+      "next": [
+        "architecture_required",
+        "backlog_draft"
+      ],
+      "human_gate": false
+    },
+    "architecture_required": {
+      "role": "servicenow-architect",
+      "next": [
+        "human_architecture_review",
+        "blocked"
+      ],
+      "human_gate": false
+    },
+    "human_architecture_review": {
+      "role": "human",
+      "next": [
+        "architecture_complete",
+        "architecture_required",
+        "cancelled"
+      ],
+      "human_gate": true
+    },
+    "architecture_complete": {
+      "role": "backlog-engineer",
+      "next": [
+        "backlog_draft"
+      ],
+      "human_gate": false
+    },
+    "backlog_draft": {
+      "role": "backlog-engineer",
+      "next": [
+        "backlog_ready",
+        "blocked"
+      ],
+      "human_gate": true
+    },
+    "backlog_ready": {
+      "role": "portfolio-advisor",
+      "next": [
+        "priority_review"
+      ],
+      "human_gate": false
+    },
+    "priority_review": {
+      "role": "human",
+      "next": [
+        "sprint_ready",
+        "backlog_ready",
+        "cancelled"
+      ],
+      "human_gate": true
+    },
+    "sprint_ready": {
+      "role": "implementation-planner",
+      "next": [
+        "implementation_planning"
+      ],
+      "human_gate": false
+    },
+    "implementation_planning": {
+      "role": "implementation-planner",
+      "next": [
+        "implementation",
+        "blocked"
+      ],
+      "human_gate": true
+    },
+    "implementation": {
+      "role": "developer",
+      "next": [
+        "code_review",
+        "testing",
+        "blocked"
+      ],
+      "human_gate": false
+    },
+    "code_review": {
+      "role": "code-reviewer",
+      "next": [
+        "pr_review",
+        "implementation",
+        "blocked"
+      ],
+      "human_gate": false
+    },
+    "pr_review": {
+      "role": "pr-reviewer",
+      "next": [
+        "testing",
+        "implementation",
+        "blocked"
+      ],
+      "human_gate": true
+    },
+    "testing": {
+      "role": "test-engineer",
+      "next": [
+        "uat_ready",
+        "implementation",
+        "blocked"
+      ],
+      "human_gate": false
+    },
+    "uat_ready": {
+      "role": "human",
+      "next": [
+        "documentation",
+        "implementation",
+        "cancelled"
+      ],
+      "human_gate": true
+    },
+    "documentation": {
+      "role": "documentation-engineer",
+      "next": [
+        "change_prep",
+        "blocked"
+      ],
+      "human_gate": false
+    },
+    "change_prep": {
+      "role": "change-prep",
+      "next": [
+        "change_ready",
+        "blocked"
+      ],
+      "human_gate": false
+    },
+    "change_ready": {
+      "role": "human",
+      "next": [
+        "release_ready",
+        "change_prep",
+        "cancelled"
+      ],
+      "human_gate": true
+    },
+    "release_ready": {
+      "role": "human",
+      "next": [
+        "released",
+        "cancelled"
+      ],
+      "human_gate": true
+    },
+    "released": {
+      "role": "release-validator",
+      "next": [
+        "post_release_validation"
+      ],
+      "human_gate": false
+    },
+    "post_release_validation": {
+      "role": "release-validator",
+      "next": [
+        "complete",
+        "blocked"
+      ],
+      "human_gate": true
+    },
+    "blocked": {
+      "role": "orchestrator",
+      "next": [
+        "requirements_ready",
+        "architecture_required",
+        "implementation",
+        "testing",
+        "change_prep",
+        "cancelled"
+      ],
+      "human_gate": true
+    },
+    "complete": {
+      "role": "none",
+      "next": [],
+      "human_gate": false
+    },
+    "cancelled": {
+      "role": "none",
+      "next": [],
+      "human_gate": false
+    }
+  }
+}

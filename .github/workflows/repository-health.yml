@@ -1,0 +1,26 @@
+name: Repository Health
+
+on:
+  workflow_dispatch:
+  # Enable after the manual audit process is trusted.
+  # schedule:
+  #   - cron: '0 14 * * 1'
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate inventory
+        run: python .agents/skills/repository-inventory/scripts/generate_inventory.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: repository-health-inputs
+          path: |
+            repository-inventory.json
+            repository-audit-coverage.md

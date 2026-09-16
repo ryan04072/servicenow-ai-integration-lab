@@ -1,0 +1,12 @@
+{
+  "id": "GT-003",
+  "name": "SDK applicability decision",
+  "role": "servicenow-architect",
+  "prompt": "Decide whether a small scoped learning app should use SDK/Fluent versus native ServiceNow tooling.",
+  "success_criteria": [
+    "evaluates artifact support",
+    "recognizes scoped/source-driven fit",
+    "does not force SDK ideology",
+    "defines tests and rollback"
+  ]
+}

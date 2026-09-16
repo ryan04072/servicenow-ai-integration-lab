@@ -1,0 +1,12 @@
+{
+  "id": "GT-001",
+  "name": "Detect OOB before custom Business Rule",
+  "role": "servicenow-architect",
+  "prompt": "A request proposes a custom Business Rule for behavior that may already exist OOB. Review the request and identify what must be checked before customization.",
+  "success_criteria": [
+    "checks OOB capability first",
+    "does not invent a plugin/API",
+    "identifies validation in PDI",
+    "does not implement prematurely"
+  ]
+}
