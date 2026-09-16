@@ -35,6 +35,14 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_dictionary'
+                        id: '67240cdfcbb246c6939e72d106933f6b'
+                        key: {
+                            name: 'x_1863347_sdkpoc_equipment'
+                            element: 'asset_tag'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '82a02dfe14664341acdb85a977336763'
                         key: {
@@ -99,6 +107,15 @@ declare global {
                         key: {
                             name: 'x_1863347_sdkpoc_equipment'
                             element: 'description'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'e718ae49296e447bb877fad1670eb353'
+                        key: {
+                            name: 'x_1863347_sdkpoc_equipment'
+                            element: 'asset_tag'
+                            language: 'en'
                         }
                     },
                 ]

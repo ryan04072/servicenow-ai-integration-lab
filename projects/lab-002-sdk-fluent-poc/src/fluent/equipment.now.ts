@@ -10,6 +10,10 @@ export const x_1863347_sdkpoc_equipment = Table({
             maxLength: 120,
             mandatory: true,
         }),
+        asset_tag: StringColumn({
+            label: 'Asset Tag',
+            maxLength: 40,
+        }),
         description: StringColumn({
             label: 'Description',
             maxLength: 255,
