@@ -82,6 +82,44 @@ Each artifact should include:
 - sensitivity;
 - metadata needed for dependency resolution.
 
+## Live PDI implementation
+
+The first live implementation is the read-only ServiceNow PDI adapter under `adapters/servicenow/`.
+
+Validated target: ServiceNow Australia PDI.
+
+The first implemented capability is `find_similar_artifacts(query, artifact_types?, limit)`.
+
+The live security boundary is:
+
+- OAuth 2.0 Client Credentials;
+- dedicated `svc_agentic_context` machine identity;
+- `agentic_context_read` OAuth scope;
+- ServiceNow Table API restricted to GET;
+- dedicated `agentic_context_reader` role;
+- explicit table and field ACLs;
+- Python artifact-type allowlist;
+- no arbitrary table-query capability exposed to agents.
+
+Version 1 currently supports:
+
+| Artifact type | ServiceNow table | Readable fields |
+|---|---|---|
+| `catalog_item` | `sc_cat_item` | `sys_id`, `name` |
+| `script_include` | `sys_script_include` | `sys_id`, `name` |
+| `business_rule` | `sys_script` | `sys_id`, `name` |
+| `client_script` | `sys_script_client` | `sys_id`, `name` |
+| `table` | `sys_db_object` | `sys_id`, `name` |
+| `field` | `sys_dictionary` | `sys_id`, `name`, `element` |
+
+Live records are normalized into the existing `reference_runtime.models.Artifact` model and returned using the same scored-result shape as the reference runtime.
+
+The live PDI vertical slice has been validated through OAuth token issuance, GET-only Table API access, least-privilege ACL evaluation, real artifact retrieval, normalization, and deterministic relevance scoring.
+
+The implementation deliberately does not yet retrieve executable script bodies, dependencies, ATF tests, flows, integration metadata, or perform ServiceNow writes.
+
+See `adapters/servicenow/README.md` for the implementation and local smoke-test runbook.
+
 ## Freshness
 
 Do not silently mix stale snapshots with live implementation data.
