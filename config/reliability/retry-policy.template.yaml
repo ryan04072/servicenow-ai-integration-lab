@@ -1,0 +1,27 @@
+version: 1
+
+error_classes:
+  transient:
+    retry: true
+    max_attempts:
+    backoff:
+  rate_limit:
+    retry: true
+    respect_retry_after: true
+  authentication:
+    retry: false
+    action: human_or_platform_support
+  authorization:
+    retry: false
+    action: human_or_security_review
+  validation:
+    retry: false
+    action: correct_input
+  business_rejection:
+    retry: false
+    action: route_decision
+
+circuit_breaker:
+  enabled: true
+  threshold:
+  reset_after:

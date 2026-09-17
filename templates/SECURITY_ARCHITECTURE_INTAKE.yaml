@@ -1,0 +1,55 @@
+request:
+  name:
+  owner:
+  technical_owner:
+  business_purpose:
+
+systems:
+  source:
+  target:
+  environments: []
+
+data:
+  classification:
+  pii: unknown
+  confidential: unknown
+
+operations:
+  reads: []
+  writes: []
+  explicitly_not_requested: []
+
+authentication:
+  current:
+  preferred:
+  fallback:
+  credential_store:
+  rotation:
+  expiration:
+
+identity:
+  type:
+  owner:
+  backup_owner:
+  environment_separation:
+
+ai:
+  runtime:
+  agents: []
+  context_sources: []
+  tools: []
+  human_gate:
+  trace_location:
+  kill_switch:
+
+network:
+  outbound_requirements:
+  inbound_requirements:
+  webhook:
+  proxy:
+
+approvals:
+  security:
+  identity:
+  data:
+  platform:

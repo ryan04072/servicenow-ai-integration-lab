@@ -1,0 +1,39 @@
+version: 1
+workflow: servicenow_enhancement
+initial_state: SUBMITTED
+states:
+- SUBMITTED
+- INTAKE
+- WAITING_FOR_CLARIFICATION
+- CONTEXT_DISCOVERY
+- ARCHITECTURE_DRAFT
+- AWAITING_ARCHITECTURE_DECISION
+- BACKLOG_READY
+- READY_FOR_DEVELOPMENT
+- IMPLEMENTATION
+- TECHNICAL_REVIEW
+- VALIDATION
+- UAT
+- RELEASE_READY
+- DEPLOYED
+- POST_RELEASE_VALIDATION
+- DOCUMENTATION
+- COMPLETE
+- BLOCKED
+- FAILED
+- CANCELLED
+human_gates:
+- state: AWAITING_ARCHITECTURE_DECISION
+  action_type: approval
+  authority: servicenow
+- state: UAT
+  action_type: approval
+  authority: business/process owner
+- state: RELEASE_READY
+  action_type: approval
+  authority: existing change/release process
+retry:
+  max_attempts: 2
+  transient_only: true
+idempotency:
+  required_for_writes: true

@@ -1,0 +1,30 @@
+{
+  "id": "INT-001",
+  "name": "OOB-before-custom integration architecture",
+  "input": "Connect ServiceNow to Microsoft Teams for an interactive workflow.",
+  "expected": {
+    "must_retrieve": [
+      "current target-instance integration state",
+      "official ServiceNow product capability",
+      "enterprise entitlement/approval status when available"
+    ],
+    "must_consider": [
+      "existing approved capability",
+      "OOB spoke/app",
+      "extend/custom reusable action",
+      "direct API/custom script"
+    ],
+    "must_produce": [
+      "identity/authentication decision",
+      "least-privilege permission analysis",
+      "ServiceNow role/ACL impact",
+      "retry/idempotency/error strategy",
+      "test strategy"
+    ],
+    "must_not": [
+      "default to a service account without justification",
+      "embed credentials",
+      "recommend custom REST before checking reusable/OOB capability"
+    ]
+  }
+}

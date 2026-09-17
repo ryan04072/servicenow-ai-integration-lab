@@ -1,0 +1,31 @@
+{
+  "name": "sn.find_similar_artifacts",
+  "purpose": "Find ServiceNow artifacts relevant to a requirement or implementation pattern.",
+  "mode": "read",
+  "risk_tier": "R0",
+  "environments": [
+    "dev",
+    "uat",
+    "prod_readonly"
+  ],
+  "inputs": {
+    "query": "string",
+    "artifact_types": "string[] optional",
+    "limit": "integer"
+  },
+  "outputs": {
+    "artifacts": "Artifact[]"
+  },
+  "timeout_seconds": 30,
+  "retry": {
+    "max_attempts": 2,
+    "transient_only": true
+  },
+  "idempotency": {
+    "required": false
+  },
+  "audit": {
+    "log_query": true,
+    "log_result_ids": true
+  }
+}

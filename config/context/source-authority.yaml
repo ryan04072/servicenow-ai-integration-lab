@@ -1,0 +1,35 @@
+version: 1
+
+authority_order:
+  - executable_evidence
+  - source_system_record
+  - approved_repository_documentation
+  - approved_enterprise_document
+  - human_provided_fact
+  - model_analysis
+
+sources:
+  servicenow:
+    authority: source_system_record
+    default_freshness: task_dependent
+
+  azure_devops:
+    authority: source_system_record
+    default_freshness: near_real_time
+
+  github:
+    authority: source_system_record
+    default_freshness: near_real_time
+
+  roadmap_repository:
+    authority: approved_repository_documentation
+    default_freshness: version_controlled
+
+  sdlc_repository:
+    authority: approved_repository_documentation
+    default_freshness: version_controlled
+
+rules:
+  model_consensus_is_ground_truth: false
+  stale_context_must_be_disclosed: true
+  missing_required_context_must_be_disclosed: true

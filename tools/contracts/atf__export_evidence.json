@@ -1,0 +1,27 @@
+{
+  "name": "atf.export_evidence",
+  "purpose": "Produce a normalized test evidence bundle for the delivery record.",
+  "mode": "read",
+  "risk_tier": "R0",
+  "environments": [
+    "dev",
+    "uat"
+  ],
+  "inputs": {
+    "execution_id": "string"
+  },
+  "outputs": {
+    "evidence_bundle": "object"
+  },
+  "timeout_seconds": 60,
+  "retry": {
+    "max_attempts": 2,
+    "transient_only": true
+  },
+  "idempotency": {
+    "required": false
+  },
+  "audit": {
+    "log_execution_id": true
+  }
+}

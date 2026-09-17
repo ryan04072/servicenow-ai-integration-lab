@@ -1,0 +1,21 @@
+version: 1
+roles:
+  executive_sponsor:
+    accountability: [enterprise_risk_tolerance, major_investment, unresolved_material_risk]
+  ai_steward:
+    responsibility: [inventory_governance, lifecycle_coordination, managed_unmanaged_disposition, portfolio_visibility]
+  ai_asset_owner:
+    accountability: [business_purpose, lifecycle, value_realization, deployment_retirement_decision_subject_to_controls]
+  business_process_owner:
+    accountability: [business_rules, process_outcome, acceptance_criteria]
+  platform_owner:
+    accountability: [technical_architecture, platform_configuration, integration_health, supportability]
+  capability_owner:
+    accountability: [deterministic_action_contract, validation, authorization, idempotency, auditability]
+  builder_maintainer:
+    responsibility: [implementation, testing, documentation, remediation]
+  security_privacy_risk:
+    responsibility: [independent_control_review, incident_response_per_enterprise_policy]
+rules:
+  ai_itself_is_accountable_party: false
+  production_asset_requires_named_owner: true

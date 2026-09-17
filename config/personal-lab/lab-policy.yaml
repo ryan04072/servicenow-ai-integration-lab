@@ -1,0 +1,40 @@
+version: 1
+mode: personal_dev_lab
+
+boundaries:
+  employer_data_allowed: false
+  employer_credentials_allowed: false
+  production_targets_allowed: false
+  public_irreversible_actions_allowed: false
+
+autonomy:
+  read_only: allowed
+  drafts: allowed
+  personal_dev_writes: allowed
+  feature_branch_changes: allowed
+  open_pull_request: allowed
+  merge_main: human
+  destructive_disposable_lab: human_confirmation
+  destructive_non_disposable: prohibited
+
+agent_orchestration:
+  delegation_allowed: true
+  max_depth: 6
+  max_agent_steps: 30
+  recursion_protection: true
+
+budgets:
+  run_budget_enabled: true
+  max_expensive_model_calls_per_run: 10
+  max_tool_calls_per_run: 100
+
+quality:
+  require_eval_for_reusable_capability: true
+  require_run_trace: true
+  require_documented_failure_mode: true
+
+security:
+  secrets_in_git: prohibited
+  scoped_pat_allowed_for_personal_dev: true
+  basic_auth_allowed_for_disposable_pdi: true
+  prefer_oauth_for_learning_and_reusable_integrations: true

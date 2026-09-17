@@ -1,0 +1,113 @@
+[
+  {
+    "id": "sn:catalog:application_access_request",
+    "artifact_type": "catalog_item",
+    "name": "Application Access Request",
+    "source": "servicenow",
+    "environment": "synthetic",
+    "scope": "global",
+    "summary": "Generic application access request supporting new/add/remove access and account requests.",
+    "tags": [
+      "access",
+      "software",
+      "application",
+      "manager approval",
+      "employee center"
+    ],
+    "evidence_locator": "mock://sc_cat_item/application_access_request",
+    "retrieved_at": "2026-09-16T16:00:00Z",
+    "sensitivity": "synthetic"
+  },
+  {
+    "id": "sn:variables:access_request_common",
+    "artifact_type": "variable_set",
+    "name": "Access Request Common Variables",
+    "source": "servicenow",
+    "environment": "synthetic",
+    "scope": "global",
+    "summary": "Reusable requester, user, location, access type, and justification variables.",
+    "tags": [
+      "access",
+      "variables",
+      "requester",
+      "location"
+    ],
+    "evidence_locator": "mock://variable_set/access_request_common",
+    "retrieved_at": "2026-09-16T16:00:00Z",
+    "sensitivity": "synthetic"
+  },
+  {
+    "id": "sn:flow:software_access_fulfillment",
+    "artifact_type": "flow",
+    "name": "Software Access Fulfillment",
+    "source": "servicenow",
+    "environment": "synthetic",
+    "scope": "global",
+    "summary": "Manager approval followed by entitlement orchestration and fulfillment status handling.",
+    "tags": [
+      "software",
+      "access",
+      "approval",
+      "fulfillment",
+      "saviynt"
+    ],
+    "evidence_locator": "mock://flow/software_access_fulfillment",
+    "retrieved_at": "2026-09-16T16:00:00Z",
+    "sensitivity": "synthetic"
+  },
+  {
+    "id": "sn:integration:identity_orchestrator",
+    "artifact_type": "integration",
+    "name": "Identity Orchestrator Integration",
+    "source": "servicenow",
+    "environment": "synthetic",
+    "scope": "global",
+    "summary": "Outbound integration pattern for approved access requests with status callback and idempotent correlation.",
+    "tags": [
+      "identity",
+      "access",
+      "api",
+      "saviynt",
+      "correlation"
+    ],
+    "evidence_locator": "mock://integration/identity_orchestrator",
+    "retrieved_at": "2026-09-16T16:00:00Z",
+    "sensitivity": "synthetic"
+  },
+  {
+    "id": "sn:atf:application_access",
+    "artifact_type": "atf_test",
+    "name": "ATF - Application Access Request",
+    "source": "servicenow",
+    "environment": "synthetic",
+    "scope": "global",
+    "summary": "Validates variable behavior, manager approval, and fulfillment handoff.",
+    "tags": [
+      "atf",
+      "access",
+      "approval"
+    ],
+    "evidence_locator": "mock://atf/application_access",
+    "retrieved_at": "2026-09-16T16:00:00Z",
+    "sensitivity": "synthetic"
+  },
+  {
+    "id": "doc:standard:catalog_reuse",
+    "artifact_type": "architecture_doc",
+    "name": "Catalog Reuse Standard",
+    "source": "github",
+    "environment": "synthetic",
+    "scope": null,
+    "summary": "Extend approved reusable catalog patterns before creating duplicate standalone request paths.",
+    "tags": [
+      "catalog",
+      "reuse",
+      "standard",
+      "oob",
+      "architecture"
+    ],
+    "evidence_locator": "mock://docs/catalog-reuse-standard",
+    "retrieved_at": "2026-09-16T16:00:00Z",
+    "sensitivity": "synthetic"
+  }
+]

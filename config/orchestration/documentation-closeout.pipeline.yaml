@@ -1,0 +1,27 @@
+version: 2
+name: documentation-closeout
+steps:
+- role: ai-build-documentation-coordinator
+  output: build_record
+- role: decision-rationale-recorder
+  condition: material_architecture_or_human_decision
+  output: decision_record
+- role: markdown-github-documentation-specialist
+  condition: material_technical_change
+  output: technical_as_built
+- role: operational-runbook-specialist
+  condition: operational_support_impact
+  output: runbook
+- role: fulfiller-knowledge-specialist
+  condition: fulfiller_or_support_behavior_changed
+  output: kb_qrg_crg_draft
+required_for_material_ai_build:
+- build_record
+- technical_as_built
+- quality_evidence
+rules:
+  one_canonical_source_per_topic: true
+  capture_decision_rationale_not_private_chain_of_thought: true
+  automatic_publish_without_required_review: false
+  link_requirement_architecture_implementation_tests_release: true
+  documentation_complete_without_build_record: false

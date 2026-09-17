@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ATF-1",
+    "name": "Submit access request",
+    "criterion": "requester can request access for an eligible user",
+    "status": "pass"
+  },
+  {
+    "id": "ATF-2",
+    "name": "Manager approval",
+    "criterion": "manager approval is captured",
+    "status": "pass"
+  },
+  {
+    "id": "ATF-3",
+    "name": "Fulfillment handoff",
+    "criterion": "approved request invokes governed fulfillment",
+    "status": "pass"
+  },
+  {
+    "id": "ATF-4",
+    "name": "Status callback",
+    "criterion": "status returns to ServiceNow",
+    "status": "pass"
+  },
+  {
+    "id": "ATF-5",
+    "name": "Automated regression evidence",
+    "criterion": "automated test coverage exists",
+    "status": "pass"
+  }
+]

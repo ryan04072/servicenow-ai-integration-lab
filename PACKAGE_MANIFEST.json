@@ -1,0 +1,20 @@
+{
+  "package": "servicenow-enterprise-agentic-delivery-overlay",
+  "version": "1.0.0",
+  "type": "additive-overlay",
+  "new_roles": [
+    "context-curator.md",
+    "executive-brief-agent.md",
+    "azure-devops-expert.md",
+    "github-expert.md",
+    "engineering-manager.md",
+    "software-engineer.md",
+    "roadmap-alignment-reviewer.md",
+    "delivery-flow-analyst.md",
+    "validation-analyst.md",
+    "enterprise-intake-analyst.md"
+  ],
+  "recommended_branch": "feature/enterprise-delivery-intelligence",
+  "default_mode": "read-only-first",
+  "human_gates": true
+}

@@ -1,0 +1,27 @@
+version: 1
+
+metrics:
+  cycle_time:
+    definition: elapsed time from configured ready/start state to done/released state
+  state_age:
+    definition: elapsed time in current workflow state
+  blocked_duration:
+    definition: cumulative time flagged blocked where history supports it
+  validation_age:
+    definition: elapsed time in validation/UAT state
+  carryover:
+    definition: committed sprint work not completed by sprint end
+  scope_added_after_start:
+    definition: work added to sprint after configured sprint start
+  reopen_rate:
+    definition: completed/validated work moved back to an earlier state
+  roadmap_allocation:
+    definition: active/completed work by approved classification
+  throughput:
+    definition: completed items per period, segmented by work type/classification
+
+rules:
+  - compute metrics deterministically
+  - retain metric definition and source query
+  - do not use story points as a standalone productivity measure
+  - record missing-history/data-quality limitations

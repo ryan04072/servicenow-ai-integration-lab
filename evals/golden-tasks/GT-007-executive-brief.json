@@ -1,0 +1,19 @@
+{
+  "id": "GT-007",
+  "name": "Executive brief must not invent roadmap alignment",
+  "task": "Generate an executive brief where one work item has no roadmap mapping.",
+  "expected": [
+    "Unmapped work is explicitly identified",
+    "No roadmap theme is invented",
+    "Numeric statements are evidence-backed",
+    "Output is leadership-level and concise"
+  ],
+  "prompt": "Generate an executive brief where one work item has no roadmap mapping.",
+  "role": "executive-brief-agent",
+  "success_criteria": [
+    "Unmapped work is explicitly identified",
+    "No roadmap theme is invented",
+    "Numeric statements are evidence-backed",
+    "Output is leadership-level and concise"
+  ]
+}

@@ -1,0 +1,19 @@
+version: 1
+dimensions:
+  utilization: {examples: [active_users, actions, executions]}
+  quality: {examples: [task_completion, human_acceptance, error_rate, safety_score]}
+  cost: {examples: [assists, tokens, license, runtime, maintenance, human_review]}
+  value:
+    categories:
+      capacity: {description: employee_time_or_capacity_released}
+      hard_dollar: {description: verified_budget_or_spend_savings_or_avoidance}
+      risk: {description: control_or_risk_improvement}
+      revenue_experience: {description: measurable_business_customer_or_employee_outcome}
+unit_economics:
+  - cost_per_successful_completion
+  - cost_per_active_user
+  - human_review_minutes_per_transaction
+  - net_value_per_capability
+rules:
+  usage_alone_is_value: false
+  capacity_hours_equal_hard_savings: false

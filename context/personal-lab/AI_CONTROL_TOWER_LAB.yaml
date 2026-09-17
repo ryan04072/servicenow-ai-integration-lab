@@ -1,0 +1,23 @@
+version: 1
+
+ai_control_tower:
+  enabled: true
+  purpose: learning_and_enterprise_simulation
+
+connections:
+  service_now:
+    status:
+  microsoft_copilot:
+    status: connected_or_in_progress
+  other: []
+
+practice_assets: []
+
+questions_to_capture:
+  - what_is_discovered_automatically
+  - what_requires_manual_registration
+  - how_ownership_is_represented
+  - how_lifecycle_is_represented
+  - how_cost_value_is_measured
+  - how_external_ai_assets_are_reconciled
+  - what_metadata_is_missing

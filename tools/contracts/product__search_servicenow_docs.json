@@ -1,0 +1,30 @@
+{
+  "name": "product.search_servicenow_docs",
+  "purpose": "Search approved/current official ServiceNow documentation for product capability evidence.",
+  "mode": "read",
+  "risk_tier": "R0",
+  "environments": [
+    "personal_lab",
+    "enterprise_when_approved"
+  ],
+  "inputs": {
+    "query": "string",
+    "release": "string optional",
+    "domains": "official ServiceNow only by default"
+  },
+  "outputs": {
+    "evidence": "EvidenceReference[]"
+  },
+  "timeout_seconds": 45,
+  "retry": {
+    "max_attempts": 2,
+    "transient_only": true
+  },
+  "idempotency": {
+    "required": false
+  },
+  "audit": {
+    "log_query": true,
+    "log_evidence_ids": true
+  }
+}

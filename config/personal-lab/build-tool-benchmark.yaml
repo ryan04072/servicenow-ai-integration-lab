@@ -1,0 +1,38 @@
+version: 1
+
+evidence_types:
+  - observed_build_agent
+  - observed_echelon
+  - servicenow_documented
+  - echelon_vendor_claim
+  - not_tested
+
+current_availability:
+  build_agent:
+    personal_pdi: true
+    enterprise: false
+  echelon:
+    personal_lab: false
+    enterprise: evaluation_candidate
+
+comparison:
+  same_normalized_requirement: true
+  same_acceptance_criteria: true
+  allow_tool_specific_implementation: true
+  marketing_claims_are_observations: false
+
+metrics:
+  - requirement_clarification
+  - context_awareness
+  - architecture_fit
+  - first_pass_correctness
+  - human_correction_minutes
+  - elapsed_time
+  - interactions_or_consumption
+  - test_quality
+  - security_findings
+  - documentation_quality
+  - package_quality
+  - portability
+  - final_acceptance
+  - cost_per_accepted_outcome

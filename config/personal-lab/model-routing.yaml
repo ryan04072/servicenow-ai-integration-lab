@@ -1,0 +1,29 @@
+version: 1
+
+routing:
+  simple_formatting:
+    preference: low_cost_fast_model
+
+  classification_extraction:
+    preference: low_cost_structured_output_model
+
+  architecture:
+    preference: strongest_reasoning_model
+
+  code_generation:
+    preference: code_specialized_or_strong_reasoning_model
+
+  independent_review:
+    preference: different_provider_when_available
+
+  high_cost_multi_model:
+    require:
+      - architecture_gate
+      - difficult_bug
+      - security_review
+      - capstone
+
+rules:
+  cheapest_model_is_not_always_best_value: true
+  log_provider_and_model: true
+  compare_cost_per_successful_outcome: true

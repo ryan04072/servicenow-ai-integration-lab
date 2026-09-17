@@ -26,3 +26,6 @@ repository-audit-coverage.md
 # Local ServiceNow SDK / auth artifacts if generated
 .now/
 .servicenow/
+
+# Reference runtime generated traces
+reference_runtime/output/*.jsonl

@@ -1,0 +1,28 @@
+{
+  "name": "quality.static_scan",
+  "purpose": "Run deterministic ServiceNow code/config checks against changed artifacts.",
+  "mode": "read",
+  "risk_tier": "R0",
+  "environments": [
+    "personal_lab",
+    "enterprise_dev"
+  ],
+  "inputs": {
+    "files_or_artifacts": "array",
+    "ruleset": "string"
+  },
+  "outputs": {
+    "findings": "array",
+    "status": "string"
+  },
+  "timeout_seconds": 60,
+  "retry": {
+    "max_attempts": 1
+  },
+  "idempotency": {
+    "required": false
+  },
+  "audit": {
+    "log_findings": true
+  }
+}

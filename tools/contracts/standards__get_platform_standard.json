@@ -1,0 +1,25 @@
+{
+  "name": "standards.get_platform_standard",
+  "purpose": "Retrieve approved standards/ADRs relevant to the topic.",
+  "mode": "read",
+  "risk_tier": "R0",
+  "environments": [
+    "all"
+  ],
+  "inputs": {
+    "topic": "string"
+  },
+  "outputs": {
+    "standards": "Standard[]"
+  },
+  "timeout_seconds": 20,
+  "retry": {
+    "max_attempts": 1
+  },
+  "idempotency": {
+    "required": false
+  },
+  "audit": {
+    "log_topic": true
+  }
+}

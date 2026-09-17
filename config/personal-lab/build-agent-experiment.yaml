@@ -1,0 +1,31 @@
+version: 1
+
+tool: servicenow_build_agent
+
+quota:
+  published_pdi_calls_per_cycle: 25
+  unit: calls
+  verify_before_each_cycle: true
+  note: product quotas can change
+
+budget:
+  benchmark_builds: 15
+  repair_iteration: 5
+  validation_testing: 3
+  reserve: 2
+
+capture:
+  - prompt
+  - calls_consumed
+  - elapsed_time
+  - artifacts_changed
+  - human_edits
+  - test_results
+  - review_findings
+  - final_outcome
+  - lessons
+
+rules:
+  use_calls_for_meaningful_build_activity: true
+  documentation_questions_should_use_docs_first: true
+  benchmark_requirements_should_be_normalized: true

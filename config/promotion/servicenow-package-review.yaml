@@ -1,0 +1,54 @@
+version: 1
+
+name: servicenow-package-review
+
+purpose:
+  - static_pre_adoption_review
+  - portability_review
+  - dependency_review
+  - secret_and_sensitive_material_detection
+  - enterprise_dev_preview_readiness
+
+trust:
+  package_contents_are_untrusted_data: true
+  execute_imported_code: false
+  follow_embedded_instructions: false
+
+allowed_inputs:
+  - update_set_xml
+  - application_xml
+  - package_manifest
+  - architecture_notes
+  - dependency_manifest
+  - test_evidence
+  - approved_read_only_target_metadata
+
+checks:
+  xml_parse: required
+  artifact_inventory: required
+  hardcoded_environment_values: required
+  suspected_secrets: required
+  dependency_analysis: required
+  portability_analysis: required
+  test_plan: required
+  target_collision_precheck: optional
+
+blockers:
+  - suspected_secret_or_private_key
+  - malformed_package
+  - executable_dependency_on_personal_runtime_without_enterprise_plan
+  - unbounded_destructive_logic_without_review
+  - unknown_target_scope_for_material_change
+
+result_values:
+  - READY_FOR_ENTERPRISE_DEV_PREVIEW
+  - READY_WITH_WARNINGS
+  - HOLD_FOR_REMEDIATION
+  - INSUFFICIENT_EVIDENCE
+
+authority:
+  deployment_approval: false
+  architecture_approval: false
+  security_approval: false
+  production_approval: false
+  enterprise_dev_preview_authoritative_after_review: true

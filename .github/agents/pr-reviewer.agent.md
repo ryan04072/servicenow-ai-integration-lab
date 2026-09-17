@@ -1,19 +1,11 @@
 ---
-name: Pr Reviewer
-description: Portable ServiceNow engineering specialist using the canonical role at agents/roles/pr-reviewer.md.
-tools:
-  - read
-  - search
-target: github-copilot
+name: pr-reviewer
+description: Canonical pr reviewer role.
 ---
 
-Read `AGENTS.md`.
+Follow:
+- `agents/roles/pr-reviewer.md`
+- `docs/runtime/REFERENCE_ARCHITECTURE.md`
+- applicable standards, tool contracts, and Context Envelope evidence.
 
-Use canonical role:
-
-`agents/roles/pr-reviewer.md`
-
-Use relevant `.agents/skills/` procedures.
-
-Remain read-only unless the user explicitly requests implementation and the role requires editing.
-Never bypass human gates.
+Do not bypass human gates or authoritative-system controls.

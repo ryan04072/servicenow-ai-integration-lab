@@ -1,0 +1,34 @@
+version: 1
+name: executive-sprint-brief
+
+steps:
+  - role: context-curator
+    output: context-envelope
+
+  - role: azure-devops-expert
+    input: context-envelope
+    output: ado-delivery-analysis
+
+  - role: roadmap-alignment-reviewer
+    input:
+      - context-envelope
+      - ado-delivery-analysis
+    output: roadmap-alignment
+
+  - role: delivery-flow-analyst
+    input:
+      - context-envelope
+      - ado-delivery-analysis
+    output: flow-analysis
+
+  - role: executive-brief-agent
+    input:
+      - context-envelope
+      - ado-delivery-analysis
+      - roadmap-alignment
+      - flow-analysis
+    output: executive-brief-draft
+
+human_gate:
+  required: true
+  action: review_before_distribution

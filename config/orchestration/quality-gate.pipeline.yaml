@@ -1,0 +1,22 @@
+version: 1
+name: servicenow-quality-gate
+steps:
+- role: code-reviewer
+  output: servicenow_review
+- tool: quality.static_scan
+  output: static_scan
+- tool: quality.instance_scan
+  condition: adapter_available
+  output: instance_scan
+- role: test-engineer
+  output: test_plan
+- tool: atf.execute
+  condition: approved_dev_adapter_available
+  output: atf_results
+on_failure:
+  classification_role: test-engineer
+  repair_role: software-engineer
+  max_automatic_repair_attempts: 2
+  after_max_attempts: create_human_action
+on_pass: human_technical_gate
+production_approval: false

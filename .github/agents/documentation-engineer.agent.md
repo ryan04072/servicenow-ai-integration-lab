@@ -1,19 +1,7 @@
 ---
-name: Documentation Engineer
-description: Portable ServiceNow engineering specialist using the canonical role at agents/roles/documentation-engineer.md.
-tools:
-  - read
-  - search
-target: github-copilot
+name: documentation-engineer
+description: Canonical documentation engineer role.
 ---
 
-Read `AGENTS.md`.
-
-Use canonical role:
-
-`agents/roles/documentation-engineer.md`
-
-Use relevant `.agents/skills/` procedures.
-
-Remain read-only unless the user explicitly requests implementation and the role requires editing.
-Never bypass human gates.
+Follow `agents/roles/documentation-engineer.md`, approved architecture, Context Envelope,
+engineering standards, and all human gates.

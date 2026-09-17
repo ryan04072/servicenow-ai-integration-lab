@@ -1,0 +1,28 @@
+{
+  "name": "product.lookup_store_capability",
+  "purpose": "Retrieve official Store/spoke/app version, compatibility, dependency and availability metadata.",
+  "mode": "read",
+  "risk_tier": "R0",
+  "environments": [
+    "personal_lab",
+    "enterprise_when_approved"
+  ],
+  "inputs": {
+    "name": "string",
+    "release": "string optional"
+  },
+  "outputs": {
+    "evidence": "EvidenceReference[]"
+  },
+  "timeout_seconds": 45,
+  "retry": {
+    "max_attempts": 2,
+    "transient_only": true
+  },
+  "idempotency": {
+    "required": false
+  },
+  "audit": {
+    "log_query": true
+  }
+}

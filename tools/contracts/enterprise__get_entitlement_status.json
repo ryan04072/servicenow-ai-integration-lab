@@ -1,0 +1,27 @@
+{
+  "name": "enterprise.get_entitlement_status",
+  "purpose": "Return approved enterprise licensing/entitlement status for a capability when such data source exists.",
+  "mode": "read",
+  "risk_tier": "R0",
+  "environments": [
+    "enterprise"
+  ],
+  "inputs": {
+    "capability": "string"
+  },
+  "outputs": {
+    "licensed_or_entitled": "boolean|null",
+    "approved_for_use": "boolean|null",
+    "evidence": "EvidenceReference[]"
+  },
+  "timeout_seconds": 30,
+  "retry": {
+    "max_attempts": 1
+  },
+  "idempotency": {
+    "required": false
+  },
+  "audit": {
+    "log_capability": true
+  }
+}

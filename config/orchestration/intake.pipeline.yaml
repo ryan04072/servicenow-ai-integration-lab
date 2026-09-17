@@ -1,0 +1,24 @@
+version: 1
+name: intelligent-intake
+
+steps:
+  - role: context-curator
+    output: context-envelope
+
+  - role: enterprise-intake-analyst
+    input: context-envelope
+    output: intake-triage
+
+  - role: backlog-engineer
+    input: intake-triage
+    output: backlog-draft
+
+  - role: portfolio-advisor
+    input:
+      - context-envelope
+      - backlog-draft
+    output: portfolio-advice
+
+human_gate:
+  required: true
+  action: approve_backlog_placement_and_priority

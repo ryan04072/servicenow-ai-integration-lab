@@ -1,0 +1,28 @@
+{
+  "name": "sn.find_existing_tests",
+  "purpose": "Find ATF or other test evidence associated with artifacts.",
+  "mode": "read",
+  "risk_tier": "R0",
+  "environments": [
+    "dev",
+    "uat",
+    "prod_readonly"
+  ],
+  "inputs": {
+    "artifact_ids": "string[]"
+  },
+  "outputs": {
+    "tests": "Artifact[]"
+  },
+  "timeout_seconds": 30,
+  "retry": {
+    "max_attempts": 2,
+    "transient_only": true
+  },
+  "idempotency": {
+    "required": false
+  },
+  "audit": {
+    "log_artifact_ids": true
+  }
+}

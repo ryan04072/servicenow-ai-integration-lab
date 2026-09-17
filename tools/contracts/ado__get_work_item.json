@@ -1,0 +1,27 @@
+{
+  "name": "ado.get_work_item",
+  "purpose": "Read the authoritative Azure DevOps work item.",
+  "mode": "read",
+  "risk_tier": "R0",
+  "environments": [
+    "enterprise",
+    "personal_lab"
+  ],
+  "inputs": {
+    "work_item_id": "string"
+  },
+  "outputs": {
+    "work_item": "object"
+  },
+  "timeout_seconds": 20,
+  "retry": {
+    "max_attempts": 2,
+    "transient_only": true
+  },
+  "idempotency": {
+    "required": false
+  },
+  "audit": {
+    "log_id": true
+  }
+}

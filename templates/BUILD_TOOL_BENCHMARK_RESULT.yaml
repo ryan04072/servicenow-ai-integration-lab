@@ -1,0 +1,32 @@
+benchmark_id:
+date:
+normalized_requirement:
+acceptance_criteria: []
+
+tool:
+  name:
+  version_or_release:
+  environment:
+
+consumption:
+  ai_calls:
+  elapsed_minutes:
+  direct_cost:
+  human_review_minutes:
+
+results:
+  requirement_clarification:
+  architecture_fit:
+  first_pass_success:
+  test_quality:
+  security_quality:
+  documentation_quality:
+  portability:
+  final_acceptance:
+
+artifacts_created: []
+artifacts_modified: []
+tests: []
+human_edits: []
+findings: []
+lessons: []

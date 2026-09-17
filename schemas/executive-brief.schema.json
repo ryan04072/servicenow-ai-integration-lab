@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExecutiveDeliveryBrief",
+  "type": "object",
+  "required": [
+    "overall_health",
+    "roadmap_progress",
+    "delivery_status",
+    "risks",
+    "decisions_needed",
+    "evidence"
+  ],
+  "properties": {
+    "overall_health": {
+      "type": "string"
+    },
+    "roadmap_progress": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "delivery_status": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "accomplishments": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "decisions_needed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "upcoming": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+version: 2
+name: engineering-review
+steps:
+- role: context-curator
+  output: context_envelope
+- role: github-expert
+  output: repository_evidence
+- role: policy-standards-guardian
+  output: standards_review
+- role: code-reviewer
+  output: servicenow_code_config_review
+- tool: quality.static_scan
+  output: static_scan
+- tool: quality.instance_scan
+  condition: adapter_available
+  output: instance_scan
+- role: test-engineer
+  output: test_plan_and_results
+- role: pr-reviewer
+  condition: source_controlled_change
+  output: pr_review
+- role: run-observability-auditor
+  output: trace_review
+repair_loop:
+  orchestrator: quality-gate-orchestrator
+  builder: software-engineer
+  max_automatic_attempts: 2
+human_gate:
+  required: true
+  action: technical_acceptance_or_return
+production_approval: false

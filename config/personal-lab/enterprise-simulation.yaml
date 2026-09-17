@@ -1,0 +1,32 @@
+version: 1
+
+mode: optional_enterprise_simulation
+enabled_by_default: false
+
+purpose:
+  - learn_enterprise_governance_mechanics
+  - practice_ai_control_tower
+  - practice_external_ai_discovery
+  - practice_lifecycle_and_value
+  - prepare_for_enterprise_implementation
+
+controls:
+  ai_asset_registration: encouraged
+  ai_control_tower_usage: encouraged_when_available
+  ownership_fields: encouraged
+  risk_classification: lightweight
+  value_measurement: lightweight
+  incident_simulation: encouraged
+  retirement_exercise: encouraged
+
+does_not_block:
+  - small_experiments
+  - throwaway_pdi_work
+  - model_comparisons
+  - disposable_automation
+  - local_code_prototypes
+
+hard_boundaries:
+  employer_data_allowed: false
+  employer_credentials_allowed: false
+  production_targets_allowed: false

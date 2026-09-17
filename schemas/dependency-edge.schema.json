@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DependencyEdge",
+  "type": "object",
+  "required": [
+    "from_id",
+    "relationship",
+    "to_id",
+    "confidence"
+  ],
+  "properties": {
+    "from_id": {
+      "type": "string"
+    },
+    "relationship": {
+      "type": "string"
+    },
+    "to_id": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "string",
+      "enum": [
+        "discovered",
+        "inferred"
+      ]
+    },
+    "evidence_locator": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

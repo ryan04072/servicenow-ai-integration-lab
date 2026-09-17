@@ -1,0 +1,24 @@
+version: 1
+
+experiment_required_fields:
+  - id
+  - hypothesis
+  - target_systems
+  - autonomy_level
+  - expected_learning
+  - success_criteria
+  - rollback
+
+completion:
+  require:
+    - result
+    - lessons
+    - keep_refactor_retire_decision
+
+promotion_to_reusable:
+  require:
+    - documentation
+    - eval
+    - failure_case
+    - secret_review
+    - reusable_capability_contract

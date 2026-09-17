@@ -1,0 +1,14 @@
+{
+  "id": "HA-001",
+  "name": "Architecture gate creates one actionable human request and resumes once",
+  "expected": {
+    "state_before": "AWAITING_ARCHITECTURE_DECISION",
+    "allowed": [
+      "approve",
+      "request_changes",
+      "reject"
+    ],
+    "approved_state": "BACKLOG_READY",
+    "duplicate_resolution_rejected": true
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CapabilityResolution",
+  "type": "object",
+  "required": [
+    "requirement",
+    "candidates",
+    "unknowns",
+    "recommendation",
+    "evidence"
+  ],
+  "properties": {
+    "requirement": {
+      "type": "string"
+    },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "recommendation": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "evidence-ref.schema.json"
+      }
+    },
+    "status": {
+      "enum": [
+        "VERIFIED",
+        "PARTIALLY_VERIFIED",
+        "INSUFFICIENT_EVIDENCE"
+      ]
+    }
+  }
+}

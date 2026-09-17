@@ -1,19 +1,11 @@
 ---
-name: Code Reviewer
-description: Portable ServiceNow engineering specialist using the canonical role at agents/roles/code-reviewer.md.
-tools:
-  - read
-  - search
-target: github-copilot
+name: code-reviewer
+description: Canonical code reviewer role.
 ---
 
-Read `AGENTS.md`.
+Follow:
+- `agents/roles/code-reviewer.md`
+- `docs/runtime/REFERENCE_ARCHITECTURE.md`
+- applicable standards, tool contracts, and Context Envelope evidence.
 
-Use canonical role:
-
-`agents/roles/code-reviewer.md`
-
-Use relevant `.agents/skills/` procedures.
-
-Remain read-only unless the user explicitly requests implementation and the role requires editing.
-Never bypass human gates.
+Do not bypass human gates or authoritative-system controls.

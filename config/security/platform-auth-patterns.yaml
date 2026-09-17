@@ -1,0 +1,45 @@
+version: 1
+
+platforms:
+  github:
+    preferred:
+      - github_app
+    transitional:
+      - fine_grained_pat
+    exception:
+      - classic_pat
+
+  azure_devops_services:
+    azure_hosted:
+      - managed_identity
+    external_unattended:
+      - entra_service_principal
+    pipeline:
+      - service_connection_workload_identity
+    exception:
+      - pat
+
+  servicenow:
+    external_ai:
+      - mcp_server_console_oauth
+    inbound_backend:
+      - oauth_client_credentials
+    outbound_api:
+      - oauth2_connection_credential_alias
+    exception:
+      - api_key
+      - basic_auth
+
+  power_automate:
+    enterprise_flow_owner:
+      - service_principal_application_user_where_supported
+    configuration:
+      - solution_aware_flow
+      - connection_reference
+
+  copilot_studio:
+    rules:
+      - validate_trigger_identity_behavior
+      - apply_dlp
+      - bound_tools
+      - human_gate_before_write_during_pilot

@@ -1,0 +1,28 @@
+{
+  "name": "ado.find_related_work",
+  "purpose": "Find relevant historical/related delivery work.",
+  "mode": "read",
+  "risk_tier": "R0",
+  "environments": [
+    "enterprise",
+    "personal_lab"
+  ],
+  "inputs": {
+    "query": "string",
+    "limit": "integer"
+  },
+  "outputs": {
+    "work_items": "object[]"
+  },
+  "timeout_seconds": 30,
+  "retry": {
+    "max_attempts": 2,
+    "transient_only": true
+  },
+  "idempotency": {
+    "required": false
+  },
+  "audit": {
+    "log_query": true
+  }
+}

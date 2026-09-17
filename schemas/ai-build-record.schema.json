@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Build Record",
+  "type": "object",
+  "required": [
+    "build_id",
+    "title",
+    "requirement_refs",
+    "context_evidence",
+    "architecture_decisions",
+    "artifacts_changed",
+    "quality_evidence",
+    "documentation_outputs",
+    "status"
+  ],
+  "properties": {
+    "build_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "planned",
+        "in_progress",
+        "quality_review",
+        "uat",
+        "released",
+        "closed",
+        "cancelled"
+      ]
+    },
+    "requirement_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "context_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "architecture_decisions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "human_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "implementation_engine": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "artifacts_changed": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "review_findings": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "quality_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "repair_history": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "release_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "documentation_outputs": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "rollback_or_disable": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "known_limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "created_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "updated_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

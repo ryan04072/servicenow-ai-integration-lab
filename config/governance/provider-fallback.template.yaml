@@ -1,0 +1,12 @@
+version: 1
+
+workflows:
+  - name:
+    primary_runtime:
+    primary_model:
+    fallback_runtime:
+    fallback_model:
+    human_fallback:
+    unsupported_features: []
+    data_restrictions: []
+    timeout_behavior:

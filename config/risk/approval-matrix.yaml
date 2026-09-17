@@ -1,0 +1,29 @@
+version: 1
+
+decisions:
+  final_business_priority:
+    owner: human
+  sprint_commitment:
+    owner: human
+  architecture_acceptance:
+    owner: human
+  security_sensitive_change:
+    owner: human
+  merge_to_main:
+    owner: human_or_approved_repository_policy
+  production_release:
+    owner: governed_change_process
+
+agent_actions:
+  summarize:
+    default_tier: R0
+  recommend:
+    default_tier: R0
+  draft:
+    default_tier: R1
+  nonprod_write:
+    default_tier: R2
+  security_change:
+    default_tier: R3
+  production_write:
+    default_tier: R4

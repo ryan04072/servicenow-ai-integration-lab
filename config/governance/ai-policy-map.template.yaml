@@ -1,0 +1,20 @@
+version: 1
+enterprise_policy_name:
+enterprise_policy_owner:
+enterprise_policy_version_or_date:
+last_reviewed:
+
+requirements:
+  - policy_id:
+    requirement:
+    applies_to:
+      - workflow
+      - agent
+      - tool
+      - data
+    implementation_controls: []
+    runtime_controls: []
+    evidence: []
+    control_owner:
+    review_cadence:
+    status: not_mapped

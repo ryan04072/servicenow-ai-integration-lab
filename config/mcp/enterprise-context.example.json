@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "description": "Illustrative only. Replace with approved enterprise MCP/tool connections.",
+  "servers": {
+    "servicenow": {
+      "enabled": false,
+      "mode": "read-only-first",
+      "capabilities": [
+        "configuration_search",
+        "schema_read",
+        "record_read"
+      ]
+    },
+    "azure-devops": {
+      "enabled": false,
+      "mode": "read-only-first",
+      "capabilities": [
+        "work_item_read",
+        "query_read",
+        "iteration_read"
+      ]
+    },
+    "github": {
+      "enabled": false,
+      "mode": "read-only-first",
+      "capabilities": [
+        "repo_read",
+        "pr_read",
+        "ci_read"
+      ]
+    }
+  },
+  "rules": {
+    "no_secrets_in_repo": true,
+    "writes_require_explicit_approval": true,
+    "production_write_default": "denied"
+  }
+}

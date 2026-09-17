@@ -1,0 +1,50 @@
+version: 1
+
+task_types:
+  executive_brief:
+    required:
+      - roadmap
+      - azure_devops
+    optional:
+      - github
+      - servicenow
+    max_detail: executive
+
+  sprint_health:
+    required:
+      - azure_devops
+    optional:
+      - github
+    max_detail: operational
+
+  roadmap_alignment:
+    required:
+      - roadmap
+      - azure_devops
+    optional:
+      - github
+
+  pr_review:
+    required:
+      - github
+      - sdlc
+    optional:
+      - azure_devops
+      - servicenow_architecture
+
+  servicenow_architecture:
+    required:
+      - servicenow_platform
+      - sdlc
+    optional:
+      - roadmap
+      - azure_devops
+      - github
+
+  intake:
+    required:
+      - roadmap
+      - sdlc
+    optional:
+      - azure_devops
+      - servicenow_platform

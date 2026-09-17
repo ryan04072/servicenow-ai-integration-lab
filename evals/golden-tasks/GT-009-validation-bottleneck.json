@@ -1,0 +1,17 @@
+{
+  "id": "GT-009",
+  "name": "Detect validation bottleneck",
+  "task": "Given high validation WIP and fast development throughput, identify the system constraint.",
+  "expected": [
+    "Validation is identified as a likely flow constraint",
+    "Agent does not recommend simply increasing development throughput",
+    "Agent surfaces aging/ownership/evidence questions"
+  ],
+  "prompt": "Given high validation WIP and fast development throughput, identify the system constraint.",
+  "role": "validation-analyst",
+  "success_criteria": [
+    "Validation is identified as a likely flow constraint",
+    "Agent does not recommend simply increasing development throughput",
+    "Agent surfaces aging/ownership/evidence questions"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.4",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "Medium",
+      "weight": "Bolder",
+      "text": "ServiceNow architecture input needed"
+    },
+    {
+      "type": "TextBlock",
+      "wrap": true,
+      "text": "${question}"
+    },
+    {
+      "type": "TextBlock",
+      "wrap": true,
+      "isSubtle": true,
+      "text": "Current evidence: ${evidence_summary}"
+    },
+    {
+      "type": "TextBlock",
+      "wrap": true,
+      "isSubtle": true,
+      "text": "Why the agent paused: ${reason}"
+    },
+    {
+      "type": "Input.Text",
+      "id": "expert_response",
+      "isMultiline": true,
+      "placeholder": "Add the missing context, direction, constraint, or correction."
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Submit Context",
+      "data": {
+        "action": "resolve_human_action",
+        "action_id": "${action_id}",
+        "decision": "provide_context"
+      }
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Needs Discussion",
+      "data": {
+        "action": "resolve_human_action",
+        "action_id": "${action_id}",
+        "decision": "needs_discussion"
+      }
+    },
+    {
+      "type": "Action.OpenUrl",
+      "title": "Open Details",
+      "url": "${source_url}"
+    }
+  ]
+}

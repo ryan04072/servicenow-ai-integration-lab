@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EvidenceReference",
+  "type": "object",
+  "required": [
+    "evidence_id",
+    "source_class",
+    "source_name",
+    "claim",
+    "retrieved_at",
+    "status"
+  ],
+  "properties": {
+    "evidence_id": {
+      "type": "string"
+    },
+    "source_class": {
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    "source_name": {
+      "type": "string"
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "locator": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "release": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "claim": {
+      "type": "string"
+    },
+    "retrieved_at": {
+      "type": "string"
+    },
+    "freshness": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "verified",
+        "unverified",
+        "stale",
+        "conflicting"
+      ]
+    }
+  }
+}

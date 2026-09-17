@@ -1,0 +1,71 @@
+version: 1
+
+principles:
+  - deterministic policy controls gates
+  - agents may recommend risk but cannot waive required approvals
+  - production writes are prohibited by default
+
+tiers:
+  R0:
+    name: read_only_analysis
+    examples:
+      - summarize sprint
+      - inspect documentation
+      - query configuration
+    allowed:
+      - automatic retrieval
+      - automatic analysis
+      - automatic draft generation
+    human_gate: optional_before_internal_use
+
+  R1:
+    name: low_risk_draft
+    examples:
+      - draft work item
+      - draft documentation
+      - draft test plan
+    allowed:
+      - create draft
+    human_gate: required_before_system_write_or_distribution
+
+  R2:
+    name: controlled_nonprod_change
+    examples:
+      - low-impact DEV configuration
+      - code change on feature branch
+    allowed:
+      - write in approved nonproduction boundary
+    human_gate:
+      - architecture_or_technical_review
+      - merge_or_apply
+
+  R3:
+    name: security_or_cross_platform_change
+    examples:
+      - ACL or role
+      - integration credentials/config
+      - base-system behavior
+      - material data model change
+    allowed:
+      - analysis
+      - plan
+      - draft
+    human_gate:
+      - platform_owner
+      - security_or_relevant_owner
+      - change_process
+
+  R4:
+    name: production_or_destructive
+    examples:
+      - production write
+      - destructive data action
+      - direct deployment
+    allowed:
+      - evidence_collection
+      - plan
+      - human_review_support
+    autonomous_write: false
+    human_gate:
+      - explicit_change_approval
+      - authorized_human_execution_or_existing_governed_pipeline

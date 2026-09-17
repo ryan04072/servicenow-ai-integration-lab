@@ -1,0 +1,26 @@
+version: 1
+owner:
+last_reviewed:
+
+capabilities:
+  - id:
+    name:
+    business_outcome:
+    authoritative_platform:
+    capability_owner:
+    implementation:
+      type: flow_or_api_or_subflow_or_action
+      reference:
+    consumers:
+      - platform:
+        agent:
+        surface:
+    operations:
+      reads: []
+      writes: []
+    risk_tier:
+    approval:
+    identity:
+    audit:
+    version:
+    status:

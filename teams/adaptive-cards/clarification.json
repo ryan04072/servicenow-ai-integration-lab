@@ -1,0 +1,64 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.4",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "Medium",
+      "weight": "Bolder",
+      "text": "ServiceNow enhancement needs clarification"
+    },
+    {
+      "type": "TextBlock",
+      "wrap": true,
+      "text": "${question}"
+    },
+    {
+      "type": "TextBlock",
+      "wrap": true,
+      "isSubtle": true,
+      "text": "Why this is needed: ${reason}"
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "choice",
+      "style": "expanded",
+      "choices": [
+        {
+          "title": "${choice_1_label}",
+          "value": "${choice_1_value}"
+        },
+        {
+          "title": "${choice_2_label}",
+          "value": "${choice_2_value}"
+        },
+        {
+          "title": "Other / add context",
+          "value": "other"
+        }
+      ]
+    },
+    {
+      "type": "Input.Text",
+      "id": "comment",
+      "isMultiline": true,
+      "placeholder": "Additional context"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Submit",
+      "data": {
+        "action": "resolve_human_action",
+        "action_id": "${action_id}"
+      }
+    },
+    {
+      "type": "Action.OpenUrl",
+      "title": "Open Details",
+      "url": "${source_url}"
+    }
+  ]
+}
