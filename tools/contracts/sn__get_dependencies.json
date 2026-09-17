@@ -1,0 +1,30 @@
+{
+  "name": "sn.get_dependencies",
+  "purpose": "Return dependency graph neighborhood for an artifact.",
+  "mode": "read",
+  "risk_tier": "R0",
+  "environments": [
+    "dev",
+    "uat",
+    "prod_readonly"
+  ],
+  "inputs": {
+    "artifact_id": "string",
+    "depth": "integer <= 3"
+  },
+  "outputs": {
+    "nodes": "Artifact[]",
+    "edges": "DependencyEdge[]"
+  },
+  "timeout_seconds": 30,
+  "retry": {
+    "max_attempts": 2,
+    "transient_only": true
+  },
+  "idempotency": {
+    "required": false
+  },
+  "audit": {
+    "log_artifact_id": true
+  }
+}

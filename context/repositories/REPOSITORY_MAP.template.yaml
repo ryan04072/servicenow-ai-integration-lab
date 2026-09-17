@@ -1,0 +1,13 @@
+version: 1
+
+repositories:
+  - name:
+    purpose:
+    source_of_truth_for: []
+    default_branch:
+    owning_team:
+    architecture_docs: []
+    agent_instruction_files: []
+    ci_workflows: []
+    related_ado_area_paths: []
+    related_servicenow_scopes: []

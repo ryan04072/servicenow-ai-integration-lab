@@ -1,0 +1,37 @@
+version: 1
+rules:
+- change_type: material_ai_assisted_change
+  required:
+  - ai_build_record
+  - technical_as_built
+  - quality_evidence
+  conditional:
+  - decision_record
+  - fulfiller_kb_qrg_crg
+  - operational_runbook
+- change_type: material_architecture_decision
+  required:
+  - decision_record
+  - technical_as_built
+  conditional:
+  - ai_build_record
+- change_type: fulfiller_process_change
+  required:
+  - fulfiller_kb_qrg_crg
+  conditional:
+  - technical_as_built
+  - operational_runbook
+- change_type: integration_change
+  required:
+  - integration_decision_packet
+  - technical_as_built
+  - operational_runbook
+  - quality_evidence
+  conditional:
+  - decision_record
+  - fulfiller_kb_qrg_crg
+- change_type: support_or_recovery_change
+  required:
+  - operational_runbook
+  conditional:
+  - fulfiller_kb_qrg_crg

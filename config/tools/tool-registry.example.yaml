@@ -1,0 +1,50 @@
+version: 1
+
+tools:
+  - id: ado.read
+    system: azure_devops
+    capabilities:
+      - work.search
+      - work.get
+      - work.query_sprint
+    access: read
+    environments: [enterprise]
+    approval_required: false
+    owner:
+
+  - id: github.read
+    system: github
+    capabilities:
+      - repo.search
+      - repo.get_pr
+      - repo.get_ci
+    access: read
+    environments: [enterprise]
+    approval_required: false
+    owner:
+
+  - id: servicenow.read
+    system: servicenow
+    capabilities:
+      - platform.search_configuration
+      - platform.get_schema
+    access: read
+    environments: [dev, uat, prod]
+    approval_required: false
+    owner:
+
+  - id: leadership_brief.draft
+    system: messaging
+    capabilities:
+      - message.create_draft
+    access: write_draft_only
+    environments: [enterprise]
+    approval_required: true
+    owner:
+
+forbidden_by_default:
+  - autonomous production configuration changes
+  - autonomous backlog prioritization
+  - autonomous merge to main
+  - autonomous production deployment
+  - autonomous external communication

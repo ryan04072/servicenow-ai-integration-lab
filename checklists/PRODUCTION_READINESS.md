@@ -1,0 +1,21 @@
+# Production Readiness
+
+- [ ] Enterprise AI policy mapping complete
+- [ ] Identity model approved
+- [ ] Data classification/retention mapped
+- [ ] Threat model reviewed
+- [ ] Tool permissions reviewed
+- [ ] Risk tier confirmed
+- [ ] SLO baseline established
+- [ ] Evals passing
+- [ ] Idempotency tested
+- [ ] Retry behavior tested
+- [ ] Duplicate event tested
+- [ ] Partial failure recovery tested
+- [ ] Kill switch tested
+- [ ] Human fallback tested
+- [ ] Run trace verified
+- [ ] Support owner assigned
+- [ ] Requester communication defined
+- [ ] Rollback defined
+- [ ] Promotion approval recorded

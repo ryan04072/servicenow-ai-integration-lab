@@ -1,0 +1,30 @@
+{
+  "name": "quality.instance_scan",
+  "purpose": "Invoke approved ServiceNow instance/code quality scan and retrieve findings.",
+  "mode": "workflow",
+  "risk_tier": "R1",
+  "environments": [
+    "dev",
+    "uat"
+  ],
+  "inputs": {
+    "scope_or_artifacts": "array",
+    "scan_suite": "string"
+  },
+  "outputs": {
+    "scan_id": "string",
+    "findings": "array",
+    "status": "string"
+  },
+  "timeout_seconds": 300,
+  "retry": {
+    "max_attempts": 1
+  },
+  "idempotency": {
+    "required": true,
+    "key": "scope+version+suite"
+  },
+  "audit": {
+    "log_scan_id": true
+  }
+}

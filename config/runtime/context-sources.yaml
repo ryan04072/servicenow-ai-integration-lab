@@ -1,0 +1,27 @@
+version: 1
+principle: maximum relevant authoritative context, not maximum volume
+sources:
+- name: servicenow_live
+  authority: 100
+  purpose: current executable platform state
+  freshness: live_or_recent_snapshot
+  mode: read_only_first
+- name: approved_repo_docs
+  authority: 90
+  purpose: approved architecture and technical standards
+- name: azure_devops
+  authority: 80
+  purpose: requirements, delivery state, prior work
+- name: github
+  authority: 80
+  purpose: implementation evidence, PRs, code-adjacent documentation
+- name: precedent_registry
+  authority: 75
+  purpose: prior human decisions and accepted patterns
+- name: human_fact
+  authority: 70
+  purpose: explicitly supplied fact
+- name: model_analysis
+  authority: 20
+  purpose: derived reasoning only
+conflict_rule: surface conflict; do not silently overwrite higher-authority evidence

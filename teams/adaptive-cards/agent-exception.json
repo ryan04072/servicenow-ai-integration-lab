@@ -1,0 +1,84 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.4",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "Medium",
+      "weight": "Bolder",
+      "text": "Agent intervention required"
+    },
+    {
+      "type": "TextBlock",
+      "wrap": true,
+      "text": "${title}"
+    },
+    {
+      "type": "FactSet",
+      "facts": [
+        {
+          "title": "Run",
+          "value": "${run_id}"
+        },
+        {
+          "title": "Agent / step",
+          "value": "${step}"
+        },
+        {
+          "title": "Impact",
+          "value": "${impact}"
+        },
+        {
+          "title": "Retries",
+          "value": "${retries}"
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "wrap": true,
+      "text": "${summary}"
+    },
+    {
+      "type": "Input.Text",
+      "id": "comment",
+      "isMultiline": true,
+      "placeholder": "Optional instruction"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Retry",
+      "data": {
+        "action": "resolve_human_action",
+        "action_id": "${action_id}",
+        "decision": "retry"
+      }
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Assign Investigation",
+      "data": {
+        "action": "resolve_human_action",
+        "action_id": "${action_id}",
+        "decision": "assign"
+      }
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Stop Run",
+      "data": {
+        "action": "resolve_human_action",
+        "action_id": "${action_id}",
+        "decision": "stop"
+      }
+    },
+    {
+      "type": "Action.OpenUrl",
+      "title": "Open Details",
+      "url": "${source_url}"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+# AI Control Tower Onboarding Checklist
+
+- [ ] AI asset discovered or registered
+- [ ] Duplicate/existing asset checked
+- [ ] Business purpose documented
+- [ ] AI asset owner assigned
+- [ ] Technical/platform owner assigned
+- [ ] Capability ID linked
+- [ ] Repository/runtime references linked
+- [ ] Managed/unmanaged disposition decided
+- [ ] Risk/impact assessment triggered if required
+- [ ] Data classification documented
+- [ ] Tools/actions documented
+- [ ] Autonomy level documented
+- [ ] Architecture review completed where required
+- [ ] Security/privacy review completed where required
+- [ ] Value template selected/created
+- [ ] Monitoring configured
+- [ ] Kill switch documented/tested
+- [ ] Support/incident path documented
+- [ ] Retirement/offboarding path documented

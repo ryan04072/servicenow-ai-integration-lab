@@ -1,0 +1,49 @@
+version: 1
+policy: authoritative retrieval before product-capability claims
+sources:
+- id: servicenow_live_instance
+  class: A
+  authority: 100
+  purpose: installed/configured/current-state truth
+  release_aware: true
+- id: servicenow_official_docs
+  class: B
+  authority: 95
+  purpose: supported product capability and release guidance
+  release_aware: true
+- id: servicenow_store
+  class: B
+  authority: 95
+  purpose: Store app/spoke version, compatibility, dependencies
+  release_aware: true
+- id: servicenow_developer_docs
+  class: B
+  authority: 90
+  purpose: developer/platform implementation guidance
+  release_aware: true
+- id: approved_internal_catalog
+  class: C
+  authority: 90
+  purpose: enterprise entitlement/approved capability status
+  release_aware: false
+- id: approved_repo_docs
+  class: C
+  authority: 90
+  purpose: internal standards/ADRs
+  release_aware: true
+- id: ado_github_delivery
+  class: D
+  authority: 80
+  purpose: implementation precedent/history
+  release_aware: false
+- id: human_fact
+  class: E
+  authority: 75
+  purpose: explicit human input
+  release_aware: false
+- id: model_analysis
+  class: F
+  authority: 20
+  purpose: reasoning only; never capability evidence
+  release_aware: false
+unverified_behavior: return UNVERIFIED or INSUFFICIENT_EVIDENCE; do not infer

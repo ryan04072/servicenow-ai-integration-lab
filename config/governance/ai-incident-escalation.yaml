@@ -1,0 +1,17 @@
+version: 1
+events:
+  low_quality_no_action:
+    primary: [ai_asset_owner, maintainer]
+  incorrect_reversible_action:
+    primary: [capability_owner, platform_owner]
+    notify: [ai_asset_owner]
+  security_or_privacy_event:
+    primary: [enterprise_security_or_privacy_process]
+    notify: [ai_asset_owner, ai_steward, platform_owner]
+  material_business_impact:
+    primary: [existing_major_incident_or_business_continuity_process]
+    notify: [executive_sponsor, ai_asset_owner, platform_owner]
+principles:
+  use_existing_incident_processes: true
+  ai_case_may_correlate_to_operational_incident: true
+  ai_is_not_accountable_party: true

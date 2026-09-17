@@ -1,0 +1,17 @@
+{
+  "id": "GT-014",
+  "name": "Missing live context must be disclosed",
+  "task": "GitHub context is available but ServiceNow live configuration tool is unavailable for an architecture review.",
+  "expected": [
+    "Agent states ServiceNow current-state evidence is unavailable",
+    "Agent does not fabricate configuration",
+    "Agent limits recommendation or requests retrieval"
+  ],
+  "prompt": "GitHub context is available but ServiceNow live configuration tool is unavailable for an architecture review.",
+  "role": "context-curator",
+  "success_criteria": [
+    "Agent states ServiceNow current-state evidence is unavailable",
+    "Agent does not fabricate configuration",
+    "Agent limits recommendation or requests retrieval"
+  ]
+}

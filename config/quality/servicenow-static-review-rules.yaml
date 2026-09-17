@@ -1,0 +1,56 @@
+version: 1
+purpose: Deterministic pre-review rules for ServiceNow code/config. These complement,
+  not replace, Instance Scan and human review.
+rules:
+- id: SN-JS-001
+  severity: HIGH
+  pattern: \beval\s*\(
+  applies_to:
+  - javascript
+  message: Dynamic eval requires explicit justification/security review.
+- id: SN-JS-002
+  severity: MEDIUM
+  pattern: current\.update\s*\(
+  applies_to:
+  - business_rule
+  - javascript
+  message: Review for recursive/re-entrant Business Rule behavior.
+- id: SN-JS-003
+  severity: MEDIUM
+  pattern: getXMLWait\s*\(
+  applies_to:
+  - client_script
+  - javascript
+  message: Synchronous client/server call; prefer asynchronous supported pattern.
+- id: SN-JS-004
+  severity: HIGH
+  pattern: '["''][0-9a-fA-F]{32}["'']'
+  applies_to:
+  - javascript
+  - xml
+  - config
+  message: Possible hard-coded sys_id; verify and parameterize if environment-specific.
+- id: SN-SEC-001
+  severity: BLOCKER
+  pattern: '-----BEGIN (RSA |EC |OPENSSH |)?PRIVATE KEY-----'
+  applies_to:
+  - all
+  message: Private key material must not be embedded.
+- id: SN-SEC-002
+  severity: BLOCKER
+  pattern: (?i)(client_secret|api_key|access_token|password)\s*[:=]\s*["'][^"']{8,}["']
+  applies_to:
+  - all
+  message: Possible embedded secret/credential.
+- id: SN-PORT-001
+  severity: MEDIUM
+  pattern: https://[A-Za-z0-9._-]+\.service-now\.com
+  applies_to:
+  - all
+  message: Hard-coded ServiceNow instance URL; verify environment abstraction.
+- id: SN-PORT-002
+  severity: MEDIUM
+  pattern: (?i)localhost|127\.0\.0\.1
+  applies_to:
+  - all
+  message: Local-only dependency requires enterprise translation.

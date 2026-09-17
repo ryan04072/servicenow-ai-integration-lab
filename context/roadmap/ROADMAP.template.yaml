@@ -1,0 +1,27 @@
+version: 1
+updated_at:
+owner:
+
+themes:
+  - id: EXAMPLE
+    name: Example Roadmap Theme
+    objective:
+    outcome:
+    priority: medium
+    horizon:
+    status:
+    measures: []
+    dependencies: []
+    tags: []
+
+classification:
+  roadmap:
+    description: Planned work tied to an approved roadmap objective.
+  bau:
+    description: Operational maintenance/support work.
+  technical_debt:
+    description: Work primarily reducing maintainability or platform risk.
+  compliance:
+    description: Required risk/security/regulatory work.
+  expedite:
+    description: Exceptional urgent work with explicit approval.

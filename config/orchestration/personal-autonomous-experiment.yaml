@@ -1,0 +1,21 @@
+version: 1
+name: personal-autonomous-experiment
+
+trigger:
+  type: manual
+
+steps:
+  - role: context-curator
+  - role: implementation-planner
+  - role: developer
+  - role: test-engineer
+  - role: code-reviewer
+
+limits:
+  environment: personal_dev_only
+  destructive_action: approval_required
+  merge_main: false
+  max_iterations: 5
+
+on_failure:
+  action: stop_and_report

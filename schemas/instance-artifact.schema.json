@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "InstanceArtifact",
+  "type": "object",
+  "required": [
+    "id",
+    "artifact_type",
+    "name",
+    "source",
+    "retrieved_at"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "artifact_type": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "scope": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "table": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source": {
+      "type": "string"
+    },
+    "retrieved_at": {
+      "type": "string"
+    },
+    "environment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evidence_locator": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sensitivity": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

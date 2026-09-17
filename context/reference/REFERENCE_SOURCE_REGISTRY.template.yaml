@@ -1,0 +1,25 @@
+version: 1
+owner:
+updated_at:
+
+sources:
+  - id: internal-servicenow-standards
+    type: internal_standard
+    authority: approved_internal
+    location:
+    applicable_release:
+    owner:
+    review_date:
+
+  - id: servicenow-official-docs
+    type: vendor_documentation
+    authority: authoritative_platform_guidance
+    location: official ServiceNow documentation
+    applicable_release: Zurich
+    owner: ServiceNow
+    review_date:
+
+rules:
+  - Model knowledge is not an authoritative reference source.
+  - Current instance configuration is current-state evidence, not reference architecture.
+  - Release-specific vendor documentation should be preferred over generic historical guidance.

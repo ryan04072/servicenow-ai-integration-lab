@@ -1,0 +1,17 @@
+{
+  "id": "GT-011",
+  "name": "Adaptive intake normalizes personas",
+  "task": "Business and technical requesters describe the same desired outcome using different language.",
+  "expected": [
+    "Each requester receives persona-appropriate questions",
+    "Both outputs conform to the same normalized intake schema",
+    "Technical solution preference is not treated as approved architecture"
+  ],
+  "prompt": "Business and technical requesters describe the same desired outcome using different language.",
+  "role": "intake-router",
+  "success_criteria": [
+    "Each requester receives persona-appropriate questions",
+    "Both outputs conform to the same normalized intake schema",
+    "Technical solution preference is not treated as approved architecture"
+  ]
+}

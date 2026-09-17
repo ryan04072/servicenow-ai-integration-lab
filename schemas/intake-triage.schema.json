@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IntakeTriage",
+  "type": "object",
+  "required": [
+    "problem",
+    "desired_outcome",
+    "missing_information",
+    "classification_recommendation",
+    "human_decisions"
+  ],
+  "properties": {
+    "problem": {
+      "type": "string"
+    },
+    "desired_outcome": {
+      "type": "string"
+    },
+    "missing_information": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "duplicate_candidates": {
+      "type": "array"
+    },
+    "roadmap_theme_candidates": {
+      "type": "array"
+    },
+    "classification_recommendation": {
+      "type": "string"
+    },
+    "draft_acceptance_criteria": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dependencies": {
+      "type": "array"
+    },
+    "human_decisions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

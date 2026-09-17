@@ -1,0 +1,31 @@
+{
+  "name": "sn.get_capability_state",
+  "purpose": "Return installed/configured/current-use state for a named ServiceNow capability in the target instance.",
+  "mode": "read",
+  "risk_tier": "R0",
+  "environments": [
+    "dev",
+    "uat",
+    "prod_readonly"
+  ],
+  "inputs": {
+    "capability": "string"
+  },
+  "outputs": {
+    "installed": "boolean|null",
+    "configured": "boolean|null",
+    "already_used": "boolean|null",
+    "evidence": "EvidenceReference[]"
+  },
+  "timeout_seconds": 30,
+  "retry": {
+    "max_attempts": 2,
+    "transient_only": true
+  },
+  "idempotency": {
+    "required": false
+  },
+  "audit": {
+    "log_capability": true
+  }
+}

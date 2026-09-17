@@ -1,19 +1,11 @@
 ---
-name: Implementation Planner
-description: Portable ServiceNow engineering specialist using the canonical role at agents/roles/implementation-planner.md.
-tools:
-  - read
-  - search
-target: github-copilot
+name: implementation-planner
+description: Canonical implementation planner role.
 ---
 
-Read `AGENTS.md`.
+Follow:
+- `agents/roles/implementation-planner.md`
+- `docs/runtime/REFERENCE_ARCHITECTURE.md`
+- applicable standards, tool contracts, and Context Envelope evidence.
 
-Use canonical role:
-
-`agents/roles/implementation-planner.md`
-
-Use relevant `.agents/skills/` procedures.
-
-Remain read-only unless the user explicitly requests implementation and the role requires editing.
-Never bypass human gates.
+Do not bypass human gates or authoritative-system controls.

@@ -1,0 +1,18 @@
+version: 1
+
+agents:
+  - id:
+    name:
+    platform:
+    purpose:
+    owner:
+    users:
+    channels: []
+    tools: []
+    capabilities_consumed: []
+    trigger_mode:
+      - user_invoked
+    autonomy_stage: crawl
+    overlaps_with: []
+    status:
+    review_date:

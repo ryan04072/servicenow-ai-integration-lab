@@ -1,0 +1,31 @@
+version: 1
+name: personal-intake-to-pr
+
+steps:
+  - role: context-curator
+    output: context
+
+  - role: enterprise-intake-analyst
+    output: normalized_requirement
+
+  - role: servicenow-architect
+    condition: servicenow_change
+    output: architecture
+
+  - role: implementation-planner
+    output: plan
+
+  - role: developer
+    output: implementation
+
+  - role: test-engineer
+    output: test_evidence
+
+  - role: code-reviewer
+    output: review
+
+  - role: documentation-engineer
+    output: documentation
+
+human_gate:
+  action: merge

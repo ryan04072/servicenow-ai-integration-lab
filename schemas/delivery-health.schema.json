@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DeliveryHealth",
+  "type": "object",
+  "properties": {
+    "sprint": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wip_by_stage": {
+      "type": "object"
+    },
+    "aging_exceptions": {
+      "type": "array"
+    },
+    "blocked_items": {
+      "type": "array"
+    },
+    "validation_queue": {
+      "type": "object"
+    },
+    "roadmap_allocation": {
+      "type": "object"
+    },
+    "decisions_needed": {
+      "type": "array"
+    }
+  }
+}

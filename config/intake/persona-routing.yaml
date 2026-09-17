@@ -1,0 +1,57 @@
+version: 1
+
+shared_questions:
+  - requester
+  - problem_or_opportunity
+  - desired_outcome
+  - affected_users_or_process
+  - required_date_or_constraint
+  - success_measure
+
+routes:
+  business:
+    agent: business-intake-analyst
+    signals:
+      - process improvement
+      - employee/customer experience
+      - business outcome
+      - manual work
+    additional_topics:
+      - current_process
+      - business_impact
+      - sponsor
+      - scale
+
+  it:
+    agent: it-intake-analyst
+    signals:
+      - application
+      - IT operations
+      - integration
+      - access
+      - support process
+    additional_topics:
+      - systems
+      - environment
+      - dependencies
+      - support_impact
+      - data_security
+
+  technical:
+    agent: technical-intake-analyst
+    signals:
+      - API
+      - table
+      - script
+      - bug
+      - code
+      - architecture
+    additional_topics:
+      - current_behavior
+      - desired_behavior
+      - evidence
+      - compatibility
+      - test_scenarios
+
+fallback:
+  action: human_triage

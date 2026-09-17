@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AgentToolContract",
+  "type": "object",
+  "required": [
+    "name",
+    "purpose",
+    "mode",
+    "risk_tier",
+    "inputs",
+    "outputs",
+    "audit"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "mode": {
+      "enum": [
+        "read",
+        "write",
+        "workflow"
+      ]
+    },
+    "risk_tier": {
+      "type": "string"
+    },
+    "environments": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "identity": {
+      "type": "object"
+    },
+    "inputs": {
+      "type": "object"
+    },
+    "outputs": {
+      "type": "object"
+    },
+    "timeout_seconds": {
+      "type": "integer"
+    },
+    "retry": {
+      "type": "object"
+    },
+    "idempotency": {
+      "type": "object"
+    },
+    "audit": {
+      "type": "object"
+    }
+  }
+}

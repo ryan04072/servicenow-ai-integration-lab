@@ -1,0 +1,15 @@
+id:
+name:
+authoritative_system:
+purpose:
+inputs: []
+outputs: []
+reads: []
+writes: []
+validation: []
+authorization:
+idempotency:
+audit:
+failure_behavior:
+version:
+consumers: []

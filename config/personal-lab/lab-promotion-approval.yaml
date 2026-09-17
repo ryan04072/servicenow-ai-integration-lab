@@ -1,0 +1,34 @@
+version: 1
+
+record:
+  concept: lab_promotion_candidate
+  recommended_base_table: task
+
+states:
+  - draft
+  - ready_for_review
+  - approved
+  - enterprise_candidate
+  - rejected
+  - rework
+  - retired
+
+approval:
+  implementation: workflow_studio_ask_for_approval
+  lab_approver: current_lab_owner
+  creates_sysapproval_approver: true
+
+trigger:
+  when_state_becomes: ready_for_review
+
+approved_path:
+  set_state: approved
+  next: enterprise_candidate_packaging
+
+rejected_path:
+  set_state: rework
+
+notes:
+  - self_approval_is_lab_simulation_only
+  - build_agent_script_approval_is_separate
+  - enterprise_deployment_approval_remains_separate

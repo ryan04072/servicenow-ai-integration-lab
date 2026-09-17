@@ -1,0 +1,48 @@
+version: 1
+
+roles:
+  platform_owner:
+  manager:
+  product_or_business_owner:
+  security:
+  ai_governance:
+  service_desk_or_operations:
+  vendor:
+  requester:
+
+decisions:
+  roadmap:
+    accountable:
+    responsible: []
+    consulted: []
+    informed: []
+
+  business_priority:
+    accountable:
+    responsible: []
+    consulted: []
+    informed: []
+
+  architecture:
+    accountable:
+    responsible: []
+    consulted: []
+    informed: []
+
+  tool_access:
+    accountable:
+    responsible: []
+    consulted: []
+    informed: []
+
+  production_release:
+    accountable:
+    responsible: []
+    consulted: []
+    informed: []
+
+  autonomy_promotion:
+    accountable:
+    responsible: []
+    consulted: []
+    informed: []

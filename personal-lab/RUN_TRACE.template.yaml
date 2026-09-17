@@ -1,0 +1,16 @@
+run_id:
+experiment_id:
+started_at:
+completed_at:
+runtime:
+model:
+systems: []
+tools: []
+autonomy_level:
+inputs:
+outputs:
+approvals: []
+errors: []
+cost:
+result:
+lessons: []

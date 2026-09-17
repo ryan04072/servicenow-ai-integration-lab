@@ -1,0 +1,19 @@
+version: 1
+
+agents:
+  - id: lab.orchestrator
+    purpose: Route personal experiments to canonical specialist roles
+    runtime: provider_neutral
+    status: planned
+
+  - id: lab.servicenow_architect
+    canonical_role: servicenow-architect
+    status: reuse_existing
+
+  - id: lab.github_engineer
+    canonical_role: github-expert
+    status: reuse_existing
+
+  - id: lab.devops_engineer
+    canonical_role: azure-devops-expert
+    status: reuse_existing

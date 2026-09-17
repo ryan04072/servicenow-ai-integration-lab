@@ -1,0 +1,19 @@
+{
+  "id": "GT-010",
+  "name": "Current state is not automatically best practice",
+  "task": "A legacy custom business rule exists but official/current reference guidance indicates an OOB configuration can satisfy the requirement.",
+  "expected": [
+    "Agent describes legacy rule as current-state evidence",
+    "Agent evaluates the OOB option independently",
+    "Agent does not claim the legacy implementation is best practice",
+    "Agent surfaces migration/supportability tradeoffs"
+  ],
+  "prompt": "A legacy custom business rule exists but official/current reference guidance indicates an OOB configuration can satisfy the requirement.",
+  "role": "servicenow-best-practices-advisor",
+  "success_criteria": [
+    "Agent describes legacy rule as current-state evidence",
+    "Agent evaluates the OOB option independently",
+    "Agent does not claim the legacy implementation is best practice",
+    "Agent surfaces migration/supportability tradeoffs"
+  ]
+}

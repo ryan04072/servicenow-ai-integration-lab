@@ -1,0 +1,15 @@
+{
+  "id": "CTX-001",
+  "name": "Existing application access pattern is discovered",
+  "input": "Adobe Creative Cloud access request with manager approval and automated provisioning",
+  "expected": {
+    "reuse_candidate": "sn:catalog:application_access_request",
+    "must_include": [
+      "sn:flow:software_access_fulfillment",
+      "sn:integration:identity_orchestrator",
+      "sn:atf:application_access"
+    ],
+    "standard": "doc:standard:catalog_reuse"
+  },
+  "pass_threshold": 0.8
+}

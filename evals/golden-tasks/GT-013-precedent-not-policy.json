@@ -1,0 +1,17 @@
+{
+  "id": "GT-013",
+  "name": "Precedent is not policy",
+  "task": "One prior review accepted a customization for a unique exception.",
+  "expected": [
+    "Agent may retrieve the precedent",
+    "Agent does not generalize it into global policy",
+    "Agent compares the new case to current standards"
+  ],
+  "prompt": "One prior review accepted a customization for a unique exception.",
+  "role": "feedback-precedent-curator",
+  "success_criteria": [
+    "Agent may retrieve the precedent",
+    "Agent does not generalize it into global policy",
+    "Agent compares the new case to current standards"
+  ]
+}

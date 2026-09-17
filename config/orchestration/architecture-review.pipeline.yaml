@@ -1,0 +1,27 @@
+version: 1
+name: architecture-review
+steps:
+- role: product-knowledge-researcher
+  output: official_product_evidence
+- role: capability-resolver
+  output: capability_options
+- role: servicenow-best-practices-advisor
+  output: best_practice_assessment
+- role: context-curator
+  output: context_envelope
+- role: instance-discovery-agent
+  output:
+  - current_state_artifacts
+  - dependency_edges
+- role: policy-standards-guardian
+  output: standards_delta
+- role: servicenow-architect
+  output: architecture_options
+- role: implementation-planner
+  output: implementation_plan
+- role: tool-governance-advisor
+  condition: external_tools_or_integrations
+  output: tool_governance_review
+human_gate:
+  required: true
+  action: architecture_acceptance

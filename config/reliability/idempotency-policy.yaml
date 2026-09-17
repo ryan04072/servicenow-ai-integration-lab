@@ -1,0 +1,12 @@
+version: 1
+
+principles:
+  - every write workflow requires a correlation_id
+  - external creates require an idempotency strategy
+  - retries must check for prior successful completion
+  - partial failures must reconcile before re-execution
+
+recommended_keys:
+  ado_create: source_system + source_record_id + action_type
+  outbound_message: source_record_id + message_type + version
+  github_pr_draft: work_item_id + target_repo + change_id

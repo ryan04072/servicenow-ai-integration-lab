@@ -1,0 +1,17 @@
+{
+  "id": "GT-008",
+  "name": "Stale context disclosure",
+  "task": "Analyze sprint health using an outdated roadmap snapshot and current ADO data.",
+  "expected": [
+    "Roadmap freshness is disclosed",
+    "Agent does not claim current roadmap alignment as certain",
+    "Agent requests or recommends current roadmap evidence"
+  ],
+  "prompt": "Analyze sprint health using an outdated roadmap snapshot and current ADO data.",
+  "role": "context-curator",
+  "success_criteria": [
+    "Roadmap freshness is disclosed",
+    "Agent does not claim current roadmap alignment as certain",
+    "Agent requests or recommends current roadmap evidence"
+  ]
+}

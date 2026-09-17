@@ -1,0 +1,28 @@
+{
+  "name": "atf.discover_tests",
+  "purpose": "Find existing ATF coverage for changed/dependent artifacts.",
+  "mode": "read",
+  "risk_tier": "R0",
+  "environments": [
+    "dev",
+    "uat"
+  ],
+  "inputs": {
+    "artifact_ids": "array"
+  },
+  "outputs": {
+    "tests": "array",
+    "coverage_map": "object"
+  },
+  "timeout_seconds": 60,
+  "retry": {
+    "max_attempts": 2,
+    "transient_only": true
+  },
+  "idempotency": {
+    "required": false
+  },
+  "audit": {
+    "log_artifact_ids": true
+  }
+}

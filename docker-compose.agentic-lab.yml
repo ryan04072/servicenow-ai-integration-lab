@@ -1,0 +1,9 @@
+services:
+  agentic-runtime:
+    build:
+      context: .
+      dockerfile: personal-lab/runtime-api/Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./personal-lab/runtime-api/data:/app/personal-lab/runtime-api/data

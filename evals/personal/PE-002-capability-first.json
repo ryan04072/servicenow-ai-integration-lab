@@ -1,0 +1,9 @@
+{
+  "id": "PE-002",
+  "task": "Build separate group removal logic inside ServiceNow agent and Copilot agent.",
+  "expected": [
+    "Recommend one shared deterministic capability",
+    "Expose capability to both surfaces",
+    "Avoid duplicate business logic"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OutcomeReview",
+  "type": "object",
+  "required": [
+    "work_item_id",
+    "expected_outcomes",
+    "status"
+  ],
+  "properties": {
+    "work_item_id": {
+      "type": "string"
+    },
+    "expected_outcomes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "observed_outcomes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "measures": {
+      "type": "array"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "achieved",
+        "partially_achieved",
+        "not_achieved",
+        "not_yet_measurable",
+        "measurement_unavailable"
+      ]
+    },
+    "lessons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "follow_up_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

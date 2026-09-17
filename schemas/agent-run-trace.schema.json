@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AgentRunTrace",
+  "type": "object",
+  "required": [
+    "run_id",
+    "started_at",
+    "trigger",
+    "roles",
+    "risk_tier",
+    "context_sources",
+    "status"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "correlation_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "started_at": {
+      "type": "string"
+    },
+    "completed_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "trigger": {
+      "type": "string"
+    },
+    "requester": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "runtime": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "model": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "risk_tier": {
+      "type": "string"
+    },
+    "context_sources": {
+      "type": "array"
+    },
+    "tool_calls": {
+      "type": "array"
+    },
+    "approvals": {
+      "type": "array"
+    },
+    "outputs": {
+      "type": "array"
+    },
+    "resulting_artifacts": {
+      "type": "array"
+    },
+    "errors": {
+      "type": "array"
+    },
+    "status": {
+      "type": "string"
+    }
+  }
+}

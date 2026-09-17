@@ -1,19 +1,7 @@
 ---
-name: Portfolio Advisor
-description: Portable ServiceNow engineering specialist using the canonical role at agents/roles/portfolio-advisor.md.
-tools:
-  - read
-  - search
-target: github-copilot
+name: portfolio-advisor
+description: Canonical portfolio advisor role.
 ---
 
-Read `AGENTS.md`.
-
-Use canonical role:
-
-`agents/roles/portfolio-advisor.md`
-
-Use relevant `.agents/skills/` procedures.
-
-Remain read-only unless the user explicitly requests implementation and the role requires editing.
-Never bypass human gates.
+Follow `agents/roles/portfolio-advisor.md` and the applicable Context Envelope, standards,
+tool contracts, and human gates.

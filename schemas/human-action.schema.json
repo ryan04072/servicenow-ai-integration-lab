@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HumanAction",
+  "type": "object",
+  "required": [
+    "action_id",
+    "correlation_id",
+    "action_type",
+    "status",
+    "title",
+    "requested_from",
+    "authoritative_system",
+    "created_at",
+    "allowed_responses"
+  ],
+  "properties": {
+    "action_id": {
+      "type": "string"
+    },
+    "correlation_id": {
+      "type": "string"
+    },
+    "action_type": {
+      "enum": [
+        "clarification",
+        "approval",
+        "exception",
+        "review",
+        "fyi"
+      ]
+    },
+    "status": {
+      "enum": [
+        "open",
+        "resolved",
+        "cancelled",
+        "expired"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "requested_from": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "participant_mode": {
+      "enum": [
+        "single",
+        "any_of",
+        "all_of",
+        "ordered"
+      ]
+    },
+    "authoritative_system": {
+      "type": "string"
+    },
+    "authoritative_record": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "allowed_responses": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "recommended_response": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "risk": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "due_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "resolved_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "resolved_by": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "decision": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "comment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "resume_event": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "metadata": {
+      "type": "object"
+    }
+  }
+}

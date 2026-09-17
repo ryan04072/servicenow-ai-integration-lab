@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DecisionPrecedent",
+  "type": "object",
+  "required": [
+    "id",
+    "date",
+    "subject",
+    "agent_recommendation",
+    "human_disposition",
+    "final_decision"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "agent_recommendation": {
+      "type": "string"
+    },
+    "human_disposition": {
+      "type": "string",
+      "enum": [
+        "accepted",
+        "modified",
+        "rejected"
+      ]
+    },
+    "reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "final_decision": {
+      "type": "string"
+    },
+    "scope": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "policy_candidate": {
+      "type": "boolean"
+    },
+    "review_date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

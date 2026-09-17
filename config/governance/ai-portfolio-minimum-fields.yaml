@@ -1,0 +1,29 @@
+version: 1
+required_for_managed_asset:
+  - asset_id
+  - name
+  - business_purpose
+  - capability_id
+  - provider
+  - runtime_platform
+  - ai_asset_owner
+  - technical_owner
+  - support_owner
+  - lifecycle_state
+  - risk_classification
+  - environment
+  - data_classification
+  - tools_or_actions
+  - autonomy_level
+  - repository_or_configuration_reference
+  - cost_center
+  - value_measurement_method
+  - kill_switch
+  - review_date
+recommended:
+  - ai_control_tower_asset_id
+  - upstream_dependencies
+  - downstream_dependencies
+  - approved_models
+  - fallback_process
+  - incident_correlation_reference

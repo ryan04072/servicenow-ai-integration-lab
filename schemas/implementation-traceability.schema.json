@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ServiceNow Implementation Traceability",
+  "type": "object",
+  "required": [
+    "work_item",
+    "acceptance_criteria",
+    "architecture_decisions",
+    "artifacts",
+    "quality_evidence",
+    "documentation"
+  ],
+  "properties": {
+    "work_item": {
+      "type": "string"
+    },
+    "acceptance_criteria": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "context_envelope": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "best_practice_assessment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "architecture_decisions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "human_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "code_review": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "quality_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "release_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "documentation": {
+      "type": "object",
+      "properties": {
+        "build_record": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "technical_as_built": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "decision_records": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fulfiller_kb_qrg_crg": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "operational_runbooks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

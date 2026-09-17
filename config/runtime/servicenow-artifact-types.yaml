@@ -1,0 +1,64 @@
+version: 1
+artifact_types:
+- type: catalog_item
+  examples:
+  - sc_cat_item
+  discover_dependencies: true
+- type: variable_set
+  examples:
+  - item_option_new_set
+  discover_dependencies: true
+- type: flow
+  examples:
+  - flow/subflow metadata
+  discover_dependencies: true
+- type: script_include
+  examples:
+  - sys_script_include
+  discover_dependencies: true
+- type: business_rule
+  examples:
+  - sys_script
+  discover_dependencies: true
+- type: client_script
+  examples:
+  - sys_script_client
+  discover_dependencies: true
+- type: ui_policy
+  examples:
+  - sys_ui_policy
+  discover_dependencies: true
+- type: acl
+  examples:
+  - sys_security_acl
+  discover_dependencies: true
+- type: table
+  examples:
+  - sys_db_object
+  discover_dependencies: true
+- type: field
+  examples:
+  - sys_dictionary
+  discover_dependencies: true
+- type: integration
+  examples:
+  - REST/integration metadata
+  discover_dependencies: true
+- type: connection_alias
+  examples:
+  - connection/credential alias metadata
+  discover_dependencies: true
+- type: atf_test
+  examples:
+  - ATF test metadata
+  discover_dependencies: true
+- type: ai_capability
+  examples:
+  - agent/skill/tool metadata
+  discover_dependencies: true
+- type: architecture_doc
+  examples:
+  - GitHub Markdown / approved documentation
+  discover_dependencies: false
+note: Exact APIs/tables must be validated against target ServiceNow release and authorized
+  read scope.

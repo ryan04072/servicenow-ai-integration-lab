@@ -1,0 +1,37 @@
+version: 1
+
+source: azure-devops
+
+identity:
+  id_field:
+  work_item_type_field:
+  title_field:
+
+planning:
+  epic_field:
+  feature_field:
+  iteration_field:
+  area_path_field:
+  roadmap_theme_field:
+  classification_field:
+  priority_field:
+
+delivery:
+  state_field:
+  assigned_to_field:
+  vendor_field:
+  blocked_field:
+  blocked_reason_field:
+  target_date_field:
+  validation_state_field:
+  last_changed_field:
+
+requirements:
+  description_field:
+  acceptance_criteria_field:
+  business_value_field:
+
+notes:
+  - Map only approved fields.
+  - Do not assume custom-field names.
+  - Record field ownership and semantic definition.

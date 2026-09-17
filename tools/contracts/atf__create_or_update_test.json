@@ -1,0 +1,28 @@
+{
+  "name": "atf.create_or_update_test",
+  "purpose": "Create or update approved ATF test definitions in DEV.",
+  "mode": "write",
+  "risk_tier": "R2",
+  "environments": [
+    "dev"
+  ],
+  "inputs": {
+    "test_definition": "object",
+    "traceability": "object"
+  },
+  "outputs": {
+    "test_id": "string",
+    "version": "string"
+  },
+  "timeout_seconds": 120,
+  "retry": {
+    "max_attempts": 1
+  },
+  "idempotency": {
+    "required": true,
+    "key": "logical_test_id+version"
+  },
+  "audit": {
+    "log_test_id": true
+  }
+}

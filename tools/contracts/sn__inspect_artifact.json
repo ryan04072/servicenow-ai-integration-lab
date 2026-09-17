@@ -1,0 +1,28 @@
+{
+  "name": "sn.inspect_artifact",
+  "purpose": "Return bounded metadata and summary for one known ServiceNow artifact.",
+  "mode": "read",
+  "risk_tier": "R0",
+  "environments": [
+    "dev",
+    "uat",
+    "prod_readonly"
+  ],
+  "inputs": {
+    "artifact_id": "string"
+  },
+  "outputs": {
+    "artifact": "Artifact"
+  },
+  "timeout_seconds": 30,
+  "retry": {
+    "max_attempts": 2,
+    "transient_only": true
+  },
+  "idempotency": {
+    "required": false
+  },
+  "audit": {
+    "log_artifact_id": true
+  }
+}

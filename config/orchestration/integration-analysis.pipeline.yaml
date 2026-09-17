@@ -1,0 +1,27 @@
+version: 1
+name: integration-analysis-and-design
+steps:
+- role: context-curator
+  output: context_envelope
+- role: product-knowledge-researcher
+  output: official_product_evidence
+- role: capability-resolver
+  output: capability_options
+- role: servicenow-best-practices-advisor
+  output: best_practice_assessment
+- role: integration-architect-engineer
+  mode: ANALYZE
+  output: integration_decision_packet
+- role: decision-rationale-recorder
+  output: decision_record_draft
+human_gates:
+- name: architecture_decision
+  required: true
+- name: security_identity_decision
+  required_when: security_or_identity_review_required
+implementation:
+  role: integration-architect-engineer
+  mode: IMPLEMENT
+  environment: dev_only_initially
+  requires_approved_architecture: true
+quality_gate: servicenow-quality-gate

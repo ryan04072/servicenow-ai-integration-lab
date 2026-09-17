@@ -1,0 +1,30 @@
+period:
+portfolio:
+  discovered_assets:
+  managed_assets:
+  unmanaged_assets:
+  ownerless_assets:
+  high_risk_assets:
+adoption:
+  active_users:
+  ai_actions:
+  top_capabilities: []
+quality:
+  task_success:
+  human_acceptance:
+  failed_actions:
+  ai_incidents:
+security_governance:
+  open_high_risk_findings:
+  overdue_reviews:
+  excessive_permission_findings:
+cost:
+  total_ai_cost:
+  by_platform: {}
+  by_capability: {}
+value:
+  capacity_hours:
+  hard_dollar_value:
+  net_ai_return:
+  top_value_assets: []
+decisions_required: []

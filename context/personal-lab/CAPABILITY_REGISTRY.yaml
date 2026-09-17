@@ -1,0 +1,24 @@
+version: 1
+
+capabilities:
+  - id: example.create_work_item
+    name: Create Work Item
+    owner: personal_lab
+    authoritative_system: azure_devops
+    status: example
+    inputs:
+      - title
+      - description
+      - acceptance_criteria
+    writes:
+      - work_item
+    autonomy: supervised
+
+  - id: example.servicenow_record_lookup
+    name: ServiceNow Record Lookup
+    owner: personal_lab
+    authoritative_system: servicenow_pdi
+    status: example
+    reads:
+      - approved_lab_tables
+    autonomy: automatic_read

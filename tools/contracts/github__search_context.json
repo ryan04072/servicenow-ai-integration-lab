@@ -1,0 +1,28 @@
+{
+  "name": "github.search_context",
+  "purpose": "Find code-adjacent documentation, ADRs, prior implementation, and PR evidence.",
+  "mode": "read",
+  "risk_tier": "R0",
+  "environments": [
+    "enterprise",
+    "personal_lab"
+  ],
+  "inputs": {
+    "query": "string",
+    "paths": "string[] optional"
+  },
+  "outputs": {
+    "matches": "object[]"
+  },
+  "timeout_seconds": 30,
+  "retry": {
+    "max_attempts": 2,
+    "transient_only": true
+  },
+  "idempotency": {
+    "required": false
+  },
+  "audit": {
+    "log_query": true
+  }
+}

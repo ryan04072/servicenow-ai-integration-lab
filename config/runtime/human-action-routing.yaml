@@ -1,0 +1,26 @@
+version: 1
+attention_surface: microsoft_teams
+system_of_record_rule: notify anywhere; decide/write back to the authoritative system
+routing:
+- type: fyi
+  delivery: digest
+  urgency: low
+- type: clarification
+  delivery: direct_adaptive_card
+  urgency: normal
+- type: approval
+  delivery: direct_adaptive_card
+  urgency: normal
+- type: review
+  delivery: direct_card_with_deep_link
+  urgency: normal
+- type: exception
+  delivery: direct_adaptive_card
+  urgency: high
+- type: critical_production_exception
+  delivery: existing_incident_escalation_plus_teams
+  urgency: critical
+escalation:
+  default_after_hours: 24
+  critical_after_minutes: 15
+sensitive_content: summary only; link to authoritative record for restricted details

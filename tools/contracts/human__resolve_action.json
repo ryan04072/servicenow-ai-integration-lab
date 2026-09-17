@@ -1,0 +1,32 @@
+{
+  "name": "human.resolve_action",
+  "purpose": "Validate and record a human response and emit an orchestration resume event.",
+  "mode": "write",
+  "risk_tier": "R1",
+  "environments": [
+    "enterprise",
+    "personal_lab"
+  ],
+  "inputs": {
+    "action_id": "string",
+    "responder": "string",
+    "decision": "string",
+    "comment": "string optional"
+  },
+  "outputs": {
+    "resolved_action": "HumanAction",
+    "resume_event": "OrchestrationEvent"
+  },
+  "timeout_seconds": 20,
+  "retry": {
+    "max_attempts": 1
+  },
+  "idempotency": {
+    "required": true,
+    "key": "action_id+decision"
+  },
+  "audit": {
+    "log_decision": true,
+    "log_responder": true
+  }
+}

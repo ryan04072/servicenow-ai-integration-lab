@@ -1,0 +1,22 @@
+{
+  "work_item": {
+    "id": "ADO-4821",
+    "title": "Adobe Creative Cloud access request",
+    "description": "Create an Employee Center request for Adobe Creative Cloud access with manager approval and automated provisioning.",
+    "acceptance_criteria": [
+      "requester can request access for an eligible user",
+      "manager approval is captured",
+      "approved request invokes governed fulfillment",
+      "status returns to ServiceNow",
+      "automated test coverage exists"
+    ]
+  },
+  "expected_reuse_candidate": "sn:catalog:application_access_request",
+  "expected_related": [
+    "sn:variables:access_request_common",
+    "sn:flow:software_access_fulfillment",
+    "sn:integration:identity_orchestrator",
+    "sn:atf:application_access"
+  ],
+  "expected_standard": "doc:standard:catalog_reuse"
+}

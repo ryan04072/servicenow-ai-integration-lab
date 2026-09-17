@@ -1,0 +1,19 @@
+version: 1
+evaluation_order:
+- existing_approved_internal_capability
+- installed_configured_oob_capability
+- installed_oob_extension
+- official_oob_not_installed_or_not_entitled
+- approved_reusable_custom_action_or_spoke
+- direct_custom_rest_or_script
+capability_state_fields:
+- exists_in_product
+- compatible_with_release
+- licensed_or_entitled
+- installed
+- configured
+- approved_for_use
+- already_used_in_instance
+- meets_requirement
+require_evidence_for_each_state: true
+custom_code_is_default: false

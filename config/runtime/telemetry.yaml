@@ -1,0 +1,27 @@
+version: 1
+trace_format: jsonl
+required:
+- run_id
+- correlation_id
+- trigger
+- state_transitions
+- roles
+- context_sources
+- tool_calls
+- human_actions
+- outputs
+- errors
+- status
+metrics:
+- completion_rate
+- blocked_rate
+- human_intervention_rate
+- retry_rate
+- tool_failure_rate
+- time_waiting_for_human
+- context_freshness
+- reuse_recommendation_rate
+- reuse_recommendation_acceptance
+- architecture_correction_rate
+- test_pass_rate
+- escaped_defect_rate

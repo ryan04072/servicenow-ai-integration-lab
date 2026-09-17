@@ -1,0 +1,29 @@
+{
+  "name": "human.create_action",
+  "purpose": "Create an actionable human clarification/approval/exception/review request.",
+  "mode": "write",
+  "risk_tier": "R1",
+  "environments": [
+    "enterprise",
+    "personal_lab"
+  ],
+  "inputs": {
+    "action": "HumanAction"
+  },
+  "outputs": {
+    "action_id": "string",
+    "delivery_status": "string"
+  },
+  "timeout_seconds": 20,
+  "retry": {
+    "max_attempts": 2,
+    "transient_only": true
+  },
+  "idempotency": {
+    "required": true,
+    "key": "action_id"
+  },
+  "audit": {
+    "log_all_non_sensitive_fields": true
+  }
+}

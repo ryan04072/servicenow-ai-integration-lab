@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ServiceNow Promotion Review",
+  "type": "object",
+  "required": [
+    "review_id",
+    "package",
+    "result",
+    "artifact_inventory",
+    "blockers",
+    "warnings",
+    "dependencies",
+    "portability",
+    "required_post_import_configuration",
+    "test_plan",
+    "human_decisions"
+  ],
+  "properties": {
+    "review_id": {
+      "type": "string"
+    },
+    "package": {
+      "type": "object",
+      "required": [
+        "name",
+        "source_environment"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "source_environment": {
+          "type": "string"
+        },
+        "hash": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "scope": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "repository": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "commit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "declared_build_tools": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "result": {
+      "enum": [
+        "READY_FOR_ENTERPRISE_DEV_PREVIEW",
+        "READY_WITH_WARNINGS",
+        "HOLD_FOR_REMEDIATION",
+        "INSUFFICIENT_EVIDENCE"
+      ]
+    },
+    "artifact_inventory": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "security_findings": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "portability": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "collision_observations": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "required_post_import_configuration": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "test_plan": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "human_decisions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

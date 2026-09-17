@@ -1,0 +1,25 @@
+version: 1
+
+states:
+  received:
+    communication: acknowledgement
+  clarification_needed:
+    communication: targeted_questions
+  accepted_for_evaluation:
+    communication: evaluation_notice
+  decision:
+    communication: decision_summary
+  planned:
+    communication: planning_update
+  in_progress:
+    communication: milestone_update
+  delivered:
+    communication: delivery_summary
+  outcome_review:
+    communication: outcome_check
+
+human_review_required_for:
+  - denial
+  - priority_dispute
+  - sensitive_request
+  - material_scope_change

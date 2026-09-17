@@ -1,0 +1,20 @@
+{
+  "id": "PK-001",
+  "name": "SharePoint solution must check official spoke evidence before recommending custom REST",
+  "input": "Automate SharePoint Online folder/site operations from ServiceNow.",
+  "expected": {
+    "must_query": [
+      "official ServiceNow product knowledge",
+      "target instance capability state"
+    ],
+    "must_distinguish": [
+      "product existence",
+      "release compatibility",
+      "entitlement",
+      "installed",
+      "configured",
+      "requirement fit"
+    ],
+    "must_not": "recommend bespoke REST solely from model memory without checking OOB capability"
+  }
+}

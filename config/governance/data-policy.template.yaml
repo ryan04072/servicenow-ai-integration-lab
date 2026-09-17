@@ -1,0 +1,16 @@
+version: 1
+authority_reference:
+
+classifications:
+  - name:
+    allowed_ai_runtimes: []
+    allowed_environments: []
+    permitted_agents: []
+    retention:
+    masking_rules: []
+    prohibited_actions: []
+
+global_rules:
+  no_secrets_in_model_context: true
+  context_minimization: true
+  synthetic_data_for_evals_preferred: true

@@ -1,0 +1,37 @@
+version: 1
+baseline_period:
+target_review_date:
+
+workflows:
+  executive_brief:
+    metrics:
+      factual_accuracy:
+        baseline:
+        target:
+      approved_without_material_edit:
+        baseline:
+        target:
+      missing_context_detection:
+        baseline:
+        target:
+
+  intelligent_intake:
+    metrics:
+      returned_for_missing_information:
+        baseline:
+        target:
+      duplicate_detection_precision:
+        baseline:
+        target:
+      human_edit_rate:
+        baseline:
+        target:
+
+  tool_runtime:
+    metrics:
+      successful_tool_calls:
+        baseline:
+        target:
+      duplicate_write_incidents:
+        baseline:
+        target: 0

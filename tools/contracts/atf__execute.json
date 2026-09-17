@@ -1,0 +1,31 @@
+{
+  "name": "atf.execute",
+  "purpose": "Run selected ATF tests/suites in an approved non-production environment.",
+  "mode": "workflow",
+  "risk_tier": "R1",
+  "environments": [
+    "dev",
+    "uat"
+  ],
+  "inputs": {
+    "test_ids": "array",
+    "environment": "string",
+    "correlation_id": "string"
+  },
+  "outputs": {
+    "execution_id": "string",
+    "results": "array",
+    "summary": "object"
+  },
+  "timeout_seconds": 1800,
+  "retry": {
+    "max_attempts": 1
+  },
+  "idempotency": {
+    "required": true,
+    "key": "correlation_id+test_set+implementation_version"
+  },
+  "audit": {
+    "log_execution_id": true
+  }
+}

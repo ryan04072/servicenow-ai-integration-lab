@@ -1,0 +1,16 @@
+version: 1
+
+questions:
+  - question: How has incident volume changed over the last 90 days?
+    audience: executive
+    required_kpis: []
+    supported_dimensions: []
+    source_visualization:
+    certified: false
+
+  - question: Which assignment groups have the largest aging backlog?
+    audience: operational_leadership
+    required_kpis: []
+    supported_dimensions:
+      - assignment_group
+    certified: false

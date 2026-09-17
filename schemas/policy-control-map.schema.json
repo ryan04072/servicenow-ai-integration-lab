@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PolicyControlMap",
+  "type": "object",
+  "required": [
+    "policy_reference",
+    "controls"
+  ],
+  "properties": {
+    "policy_reference": {
+      "type": "string"
+    },
+    "controls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "policy_id",
+          "implementation_control",
+          "owner",
+          "status"
+        ],
+        "properties": {
+          "policy_id": {
+            "type": "string"
+          },
+          "implementation_control": {
+            "type": "string"
+          },
+          "owner": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

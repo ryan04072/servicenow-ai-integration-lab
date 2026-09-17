@@ -1,0 +1,44 @@
+version: 1
+name: autonomous-intake-preapproval
+
+trigger:
+  type: intake_created
+
+steps:
+  - role: intake-router
+    output: selected_route
+
+  - role: context-curator
+    output: context_envelope
+
+  - role: selected_route
+    output: normalized_intake
+
+  - role: policy-standards-guardian
+    condition: technical_or_platform_impact
+    output: standards_review
+
+  - role: enterprise-intake-analyst
+    output: triage_packet
+
+  - role: backlog-engineer
+    output: work_item_draft
+
+  - role: roadmap-alignment-reviewer
+    output: roadmap_advice
+
+  - role: tool-governance-advisor
+    condition: requested_automation_or_integration
+    output: tool_access_review
+
+approval:
+  required: true
+  decision:
+    - accept
+    - request_more_information
+    - reject_duplicate
+    - approve_backlog_entry
+    - escalate_architecture_review
+
+post_approval:
+  create_or_update_backlog_item: approved_runtime_only

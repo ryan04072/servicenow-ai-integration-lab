@@ -1,0 +1,18 @@
+version: 1
+
+stages:
+  development:
+    live_production_writes: false
+    synthetic_data_preferred: true
+  evaluation:
+    live_production_writes: false
+    evals_required: true
+  pilot:
+    bounded_audience: true
+    human_review_required: true
+  production:
+    owner_required: true
+    kill_switch_required: true
+    observability_required: true
+    support_model_required: true
+    production_write_governed_separately: true

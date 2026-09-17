@@ -1,0 +1,27 @@
+version: 1
+
+servicenow:
+  instance_alias:
+  environment: PDI
+  purpose: personal_lab
+
+github:
+  repositories: []
+
+azure_devops:
+  organization:
+  project:
+
+microsoft:
+  tenant_type: personal_business_or_dev
+  copilot_studio: unknown
+  power_automate: unknown
+
+optional:
+  n8n: false
+  docker: true
+  mcp_servers: []
+
+rules:
+  synthetic_or_personal_data_only: true
+  no_employer_secrets: true

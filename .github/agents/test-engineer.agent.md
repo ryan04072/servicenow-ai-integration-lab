@@ -1,19 +1,11 @@
 ---
-name: Test Engineer
-description: Portable ServiceNow engineering specialist using the canonical role at agents/roles/test-engineer.md.
-tools:
-  - read
-  - search
-target: github-copilot
+name: test-engineer
+description: Canonical test engineer role.
 ---
 
-Read `AGENTS.md`.
+Follow:
+- `agents/roles/test-engineer.md`
+- `docs/runtime/REFERENCE_ARCHITECTURE.md`
+- applicable standards, tool contracts, and Context Envelope evidence.
 
-Use canonical role:
-
-`agents/roles/test-engineer.md`
-
-Use relevant `.agents/skills/` procedures.
-
-Remain read-only unless the user explicitly requests implementation and the role requires editing.
-Never bypass human gates.
+Do not bypass human gates or authoritative-system controls.

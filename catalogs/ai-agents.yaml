@@ -1,0 +1,629 @@
+version: 5
+agents:
+- id: servicenow.ai-build-documentation-coordinator
+  name: Ai Build Documentation Coordinator
+  status: canonical
+  platform: runtime-neutral
+  purpose: Ensure every material AI-assisted ServiceNow implementation leaves a complete,
+    reviewable documentation/evidence package.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/ai-build-documentation-coordinator.md
+  implementation_reference: .github/agents/ai-build-documentation-coordinator.agent.md
+- id: servicenow.azure-devops-expert
+  name: Azure Devops Expert
+  status: canonical
+  platform: runtime-neutral
+  purpose: Interpret Azure DevOps planning/delivery data accurately and advise other
+    agents on backlog, sprint, hierarchy, iteration, fields, and workflow semantics.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/azure-devops-expert.md
+  implementation_reference: .github/agents/azure-devops-expert.agent.md
+- id: servicenow.backlog-engineer
+  name: Backlog Engineer
+  status: canonical
+  platform: runtime-neutral
+  purpose: Create/refine traceable backlog artifacts from approved requirements and
+    architecture without inventing scope.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/backlog-engineer.md
+  implementation_reference: .github/agents/backlog-engineer.agent.md
+- id: servicenow.business-intake-analyst
+  name: Business Intake Analyst
+  status: canonical
+  platform: runtime-neutral
+  purpose: Turn a business problem/opportunity into a triage-ready work package without
+    requiring technical implementation knowledge.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/business-intake-analyst.md
+  implementation_reference: .github/agents/business-intake-analyst.agent.md
+- id: servicenow.capability-resolver
+  name: Capability Resolver
+  status: canonical
+  platform: runtime-neutral
+  purpose: 'Determine the best implementation path by combining: - live instance truth;
+    - entitlement/install/configuration status; - official ServiceNow product knowledge;
+    - approved internal standards; - existing enterprise capability; - delivery precedent.'
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/capability-resolver.md
+  implementation_reference: .github/agents/capability-resolver.agent.md
+- id: servicenow.code-reviewer
+  name: Code Reviewer
+  status: canonical
+  platform: runtime-neutral
+  purpose: Review ServiceNow implementation for correctness, platform fit, maintainability,
+    security, performance, portability, and alignment with approved architecture.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/code-reviewer.md
+  implementation_reference: .github/agents/code-reviewer.agent.md
+- id: servicenow.context-curator
+  name: Context Curator
+  status: canonical
+  platform: runtime-neutral
+  purpose: Assemble the smallest complete context envelope needed for another agent
+    to make a reliable decision.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/context-curator.md
+  implementation_reference: .github/agents/context-curator.agent.md
+- id: servicenow.decision-rationale-recorder
+  name: Decision Rationale Recorder
+  status: canonical
+  platform: runtime-neutral
+  purpose: Create an auditable decision record that explains **why a design was chosen**
+    without attempting to store private model chain-of-thought.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/decision-rationale-recorder.md
+  implementation_reference: .github/agents/decision-rationale-recorder.agent.md
+- id: servicenow.delivery-flow-analyst
+  name: Delivery Flow Analyst
+  status: canonical
+  platform: runtime-neutral
+  purpose: Analyze flow across the SDLC and identify where work accumulates or ages.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/delivery-flow-analyst.md
+  implementation_reference: .github/agents/delivery-flow-analyst.agent.md
+- id: servicenow.developer
+  name: Developer
+  status: canonical
+  platform: runtime-neutral
+  purpose: Implement approved ServiceNow changes in DEV using the approved architecture,
+    implementation plan, engineering standards, and bounded tool permissions.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/developer.md
+  implementation_reference: .github/agents/developer.agent.md
+- id: servicenow.documentation-engineer
+  name: Documentation Engineer
+  status: canonical
+  platform: runtime-neutral
+  purpose: Determine which documentation specialists are required for a material change
+    and coordinate documentation closeout.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/documentation-engineer.md
+  implementation_reference: .github/agents/documentation-engineer.agent.md
+- id: servicenow.engineering-manager
+  name: Engineering Manager
+  status: canonical
+  platform: runtime-neutral
+  purpose: Evaluate delivery health, engineering risk, capacity flow, and coordination
+    across humans, vendors, and AI contributors.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/engineering-manager.md
+  implementation_reference: .github/agents/engineering-manager.agent.md
+- id: servicenow.enterprise-intake-analyst
+  name: Enterprise Intake Analyst
+  status: canonical
+  platform: runtime-neutral
+  purpose: Convert ambiguous incoming demand into triage-ready work without silently
+    making business-priority decisions.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/enterprise-intake-analyst.md
+  implementation_reference: .github/agents/enterprise-intake-analyst.agent.md
+- id: servicenow.executive-brief-agent
+  name: Executive Brief Agent
+  status: canonical
+  platform: runtime-neutral
+  purpose: Convert delivery evidence into a concise leadership brief.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/executive-brief-agent.md
+  implementation_reference: .github/agents/executive-brief-agent.agent.md
+- id: servicenow.expert-feedback-curator
+  name: Expert Feedback Curator
+  status: canonical
+  platform: runtime-neutral
+  purpose: Turn human expert responses from Teams/ServiceNow/approved review channels
+    into usable case context and, when appropriate, candidate precedent.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/expert-feedback-curator.md
+  implementation_reference: .github/agents/expert-feedback-curator.agent.md
+- id: servicenow.feedback-precedent-curator
+  name: Feedback Precedent Curator
+  status: canonical
+  platform: runtime-neutral
+  purpose: Capture human decisions and review outcomes as retrievable organizational
+    precedent.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/feedback-precedent-curator.md
+  implementation_reference: .github/agents/feedback-precedent-curator.agent.md
+- id: servicenow.fulfiller-knowledge-specialist
+  name: Fulfiller Knowledge Specialist
+  status: canonical
+  platform: runtime-neutral
+  purpose: Create concise, usable ServiceNow Knowledge content for fulfillers, Service
+    Desk, Tier 1/Tier 2, and operational support personas.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/fulfiller-knowledge-specialist.md
+  implementation_reference: .github/agents/fulfiller-knowledge-specialist.agent.md
+- id: servicenow.github-expert
+  name: Github Expert
+  status: canonical
+  platform: runtime-neutral
+  purpose: Provide repository, PR, CI, branch, documentation, and review context to
+    the engineering system.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/github-expert.md
+  implementation_reference: .github/agents/github-expert.agent.md
+- id: servicenow.historical-delivery-analyst
+  name: Historical Delivery Analyst
+  status: canonical
+  platform: runtime-neutral
+  purpose: Use deterministic delivery history to explain how work has flowed over
+    time and surface patterns relevant to planning and process improvement.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/historical-delivery-analyst.md
+  implementation_reference: .github/agents/historical-delivery-analyst.agent.md
+- id: servicenow.implementation-planner
+  name: Implementation Planner
+  status: canonical
+  platform: runtime-neutral
+  purpose: Translate approved ServiceNow architecture into a small, ordered, testable
+    implementation plan.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/implementation-planner.md
+  implementation_reference: .github/agents/implementation-planner.agent.md
+- id: servicenow.instance-discovery-agent
+  name: Instance Discovery Agent
+  status: canonical
+  platform: runtime-neutral
+  purpose: Build an evidence-backed view of relevant ServiceNow configuration and
+    dependencies.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/instance-discovery-agent.md
+  implementation_reference: .github/agents/instance-discovery-agent.agent.md
+- id: servicenow.intake-router
+  name: Intake Router
+  status: canonical
+  platform: runtime-neutral
+  purpose: Select the appropriate intake interview without creating separate incompatible
+    intake processes.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/intake-router.md
+  implementation_reference: .github/agents/intake-router.agent.md
+- id: servicenow.integration-architect-engineer
+  name: Integration Architect Engineer
+  status: canonical
+  platform: runtime-neutral
+  purpose: Research, design, document, and—when explicitly authorized—implement supportable
+    ServiceNow integrations.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/integration-architect-engineer.md
+  implementation_reference: .github/agents/integration-architect-engineer.agent.md
+- id: servicenow.it-intake-analyst
+  name: It Intake Analyst
+  status: canonical
+  platform: runtime-neutral
+  purpose: Refine IT/platform demand into a triage-ready work package.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/it-intake-analyst.md
+  implementation_reference: .github/agents/it-intake-analyst.agent.md
+- id: servicenow.markdown-github-documentation-specialist
+  name: Markdown Github Documentation Specialist
+  status: canonical
+  platform: runtime-neutral
+  purpose: Maintain the canonical technical documentation for ServiceNow architecture
+    and engineering as version-controlled Markdown close to implementation.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/markdown-github-documentation-specialist.md
+  implementation_reference: .github/agents/markdown-github-documentation-specialist.agent.md
+- id: servicenow.operational-runbook-specialist
+  name: Operational Runbook Specialist
+  status: canonical
+  platform: runtime-neutral
+  purpose: Create supportable operational procedures for platform owners/admins who
+    need to operate, troubleshoot, recover, or disable a capability after deployment.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/operational-runbook-specialist.md
+  implementation_reference: .github/agents/operational-runbook-specialist.agent.md
+- id: servicenow.policy-standards-guardian
+  name: Policy Standards Guardian
+  status: canonical
+  platform: runtime-neutral
+  purpose: Prevent agents from confusing current-state configuration, historical precedent,
+    or model knowledge with approved platform best practice.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/policy-standards-guardian.md
+  implementation_reference: .github/agents/policy-standards-guardian.agent.md
+- id: servicenow.portfolio-advisor
+  name: Portfolio Advisor
+  status: canonical
+  platform: runtime-neutral
+  purpose: Provide roadmap, dependency, value, and capacity context without making
+    final priority decisions.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/portfolio-advisor.md
+  implementation_reference: .github/agents/portfolio-advisor.agent.md
+- id: servicenow.pr-reviewer
+  name: Pr Reviewer
+  status: canonical
+  platform: runtime-neutral
+  purpose: Review source-controlled changes for traceability, scope, tests, documentation,
+    and merge readiness after ServiceNow-specific code/config review.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/pr-reviewer.md
+  implementation_reference: .github/agents/pr-reviewer.agent.md
+- id: servicenow.product-knowledge-researcher
+  name: Product Knowledge Researcher
+  status: canonical
+  platform: runtime-neutral
+  purpose: Retrieve current, release-aware, authoritative ServiceNow product knowledge
+    before architecture or implementation decisions rely on product capability claims.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/product-knowledge-researcher.md
+  implementation_reference: .github/agents/product-knowledge-researcher.agent.md
+- id: servicenow.quality-gate-orchestrator
+  name: Quality Gate Orchestrator
+  status: canonical
+  platform: runtime-neutral
+  purpose: Coordinate the post-build quality loop without becoming the code reviewer
+    or test author itself.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/quality-gate-orchestrator.md
+  implementation_reference: .github/agents/quality-gate-orchestrator.agent.md
+- id: servicenow.roadmap-alignment-reviewer
+  name: Roadmap Alignment Reviewer
+  status: canonical
+  platform: runtime-neutral
+  purpose: Evaluate whether planned and active delivery aligns to approved roadmap
+    objectives.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/roadmap-alignment-reviewer.md
+  implementation_reference: .github/agents/roadmap-alignment-reviewer.agent.md
+- id: servicenow.run-observability-auditor
+  name: Run Observability Auditor
+  status: canonical
+  platform: runtime-neutral
+  purpose: Make material agent-assisted delivery auditable and diagnosable.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/run-observability-auditor.md
+  implementation_reference: .github/agents/run-observability-auditor.agent.md
+- id: servicenow.selected_route
+  name: Selected_Route
+  status: canonical
+  platform: runtime-neutral
+  purpose: Fulfill the orchestration responsibility defined by the canonical pipeline
+    while preserving policy, evidence, and human gates.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/selected_route.md
+  implementation_reference: .github/agents/selected_route.agent.md
+- id: servicenow.servicenow-architect
+  name: Servicenow Architect
+  status: canonical
+  platform: runtime-neutral
+  purpose: Turn an approved/normalized requirement plus authoritative platform context
+    into a supportable ServiceNow architecture decision.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/servicenow-architect.md
+  implementation_reference: .github/agents/servicenow-architect.agent.md
+- id: servicenow.servicenow-best-practices-advisor
+  name: Servicenow Best Practices Advisor
+  status: canonical
+  platform: runtime-neutral
+  purpose: Provide evidence-backed ServiceNow best-practice guidance to architects,
+    integration specialists, builders, reviewers, and platform owners.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/servicenow-best-practices-advisor.md
+  implementation_reference: .github/agents/servicenow-best-practices-advisor.agent.md
+- id: servicenow.servicenow-promotion-reviewer
+  name: Servicenow Promotion Reviewer
+  status: canonical
+  platform: runtime-neutral
+  purpose: Perform a **pre-adoption static review** of a ServiceNow package that was
+    built outside the enterprise delivery environment (for example a personal sandbox/PDI,
+    innovation lab, partner environment, or isolated prototype).
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/servicenow-promotion-reviewer.md
+  implementation_reference: .github/agents/servicenow-promotion-reviewer.agent.md
+- id: servicenow.software-engineer
+  name: Software Engineer
+  status: canonical
+  platform: runtime-neutral
+  purpose: Implement approved software changes according to architecture, repository,
+    security, testing, and SDLC standards.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/software-engineer.md
+  implementation_reference: .github/agents/software-engineer.agent.md
+- id: servicenow.technical-intake-analyst
+  name: Technical Intake Analyst
+  status: canonical
+  platform: runtime-neutral
+  purpose: Refine engineering-oriented demand while preserving the distinction between
+    requirement and implementation.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/technical-intake-analyst.md
+  implementation_reference: .github/agents/technical-intake-analyst.agent.md
+- id: servicenow.test-engineer
+  name: Test Engineer
+  status: canonical
+  platform: runtime-neutral
+  purpose: Design, generate, execute, analyze, and maintain automated tests for ServiceNow
+    changes in approved non-production environments.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/test-engineer.md
+  implementation_reference: .github/agents/test-engineer.agent.md
+- id: servicenow.tool-governance-advisor
+  name: Tool Governance Advisor
+  status: canonical
+  platform: runtime-neutral
+  purpose: Review proposed agent/tool access against least privilege and the enterprise
+    tool registry.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/tool-governance-advisor.md
+  implementation_reference: .github/agents/tool-governance-advisor.agent.md
+- id: servicenow.validation-analyst
+  name: Validation Analyst
+  status: canonical
+  platform: runtime-neutral
+  purpose: Focus specifically on validation/UAT queues and evidence quality.
+  owner: ServiceNow Platform
+  context_sources:
+  - context_envelope
+  - product_knowledge_when_relevant
+  autonomy_stage: role-dependent
+  trigger_modes:
+  - orchestrated
+  runbook: agents/roles/validation-analyst.md
+  implementation_reference: .github/agents/validation-analyst.agent.md

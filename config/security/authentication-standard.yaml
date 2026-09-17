@@ -1,0 +1,45 @@
+version: 1
+status: proposed_for_security_review
+
+principles:
+  unattended_automation_uses_nonhuman_identity: true
+  prefer_short_lived_credentials: true
+  least_privilege: true
+  environment_separation: true
+  no_secrets_in_source: true
+  no_silent_authentication_downgrade: true
+
+defaults:
+  interactive_user:
+    preferred: delegated_oauth_or_sso
+
+  azure_hosted_automation:
+    preferred: managed_identity
+
+  microsoft_external_automation:
+    preferred: entra_service_principal
+    credential_preference:
+      - workload_federation
+      - certificate
+      - client_secret
+
+  github_long_lived_integration:
+    preferred: github_app
+
+  servicenow_external_ai:
+    preferred: mcp_server_console_oauth
+
+  servicenow_api:
+    preferred: oauth2_connection_credential_alias
+
+fallback:
+  requires_documented_reason: true
+  requires_compensating_controls: true
+  requires_review: true
+
+restricted:
+  - broad_classic_pat
+  - shared_human_account
+  - embedded_secret
+  - basic_auth_as_default_new_integration
+  - admin_role_for_convenience

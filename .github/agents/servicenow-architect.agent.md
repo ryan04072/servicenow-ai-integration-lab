@@ -1,19 +1,11 @@
 ---
-name: Servicenow Architect
-description: Portable ServiceNow engineering specialist using the canonical role at agents/roles/servicenow-architect.md.
-tools:
-  - read
-  - search
-target: github-copilot
+name: servicenow-architect
+description: Canonical servicenow architect role.
 ---
 
-Read `AGENTS.md`.
+Follow:
+- `agents/roles/servicenow-architect.md`
+- `docs/runtime/REFERENCE_ARCHITECTURE.md`
+- applicable standards, tool contracts, and Context Envelope evidence.
 
-Use canonical role:
-
-`agents/roles/servicenow-architect.md`
-
-Use relevant `.agents/skills/` procedures.
-
-Remain read-only unless the user explicitly requests implementation and the role requires editing.
-Never bypass human gates.
+Do not bypass human gates or authoritative-system controls.

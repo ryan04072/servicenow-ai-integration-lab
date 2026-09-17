@@ -1,0 +1,22 @@
+version: 1
+
+experiments:
+  - id: P-001
+    title: Intelligent intake
+    phase: 1
+    status: candidate
+
+  - id: P-010
+    title: ServiceNow instance discovery graph
+    phase: 1
+    status: candidate
+
+  - id: P-031
+    title: Executive IT brief
+    phase: 1
+    status: candidate
+
+  - id: P-040
+    title: One capability / many surfaces
+    phase: 5
+    status: candidate
