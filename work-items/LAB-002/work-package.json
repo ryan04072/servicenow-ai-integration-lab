@@ -1,0 +1,222 @@
+{
+  "id": "LAB-002",
+  "title": "ServiceNow SDK and Fluent proof of concept",
+  "state": "implementation",
+  "human_gate": false,
+  "created_at": "2026-09-16T04:07:13.791087+00:00",
+  "updated_at": "2026-09-16T04:59:53.823680+00:00",
+  "links": {
+    "servicenow_intake": null,
+    "ado_work_item": null,
+    "github_branch": "feature/lab-002-sdk-fluent-poc",
+    "github_pr": null,
+    "change_request": null,
+    "release": null
+  },
+  "classifications": {
+    "architecture_impact": "unknown",
+    "integration_impact": "unknown",
+    "code_impact": "unknown",
+    "security_impact": "unknown",
+    "documentation_impact": "unknown",
+    "adr_required": "review"
+  },
+  "evidence": {
+    "requirements": "work-items/LAB-002/requirements.md",
+    "architecture_review": "work-items/LAB-002/architecture-review.md",
+    "implementation_plan": "work-items/LAB-002/implementation-plan.md",
+    "test_plan": null,
+    "pr_review": null,
+    "change_readiness": null,
+    "release_manifest": null,
+    "as_built": null
+  },
+  "history": [
+    {
+      "at": "2026-09-16T04:07:13.791087+00:00",
+      "event": "work_package_created",
+      "details": {}
+    },
+    {
+      "at": "2026-09-16T04:07:49.893760+00:00",
+      "event": "agent_dispatch",
+      "details": {
+        "role": "intake-analyst",
+        "provider": "manual",
+        "result": {
+          "mode": "manual",
+          "provider": "manual",
+          "prompt_file": "runs\\LAB-002\\intake_received--intake-analyst--manual.md"
+        }
+      }
+    },
+    {
+      "at": "2026-09-16T04:11:34.440703+00:00",
+      "event": "state_transition",
+      "details": {
+        "from": "intake_received",
+        "to": "requirements_ready",
+        "human_approved": false
+      }
+    },
+    {
+      "at": "2026-09-16T04:12:02.667162+00:00",
+      "event": "state_transition",
+      "details": {
+        "from": "requirements_ready",
+        "to": "architecture_required",
+        "human_approved": false
+      }
+    },
+    {
+      "at": "2026-09-16T04:12:27.566969+00:00",
+      "event": "agent_dispatch",
+      "details": {
+        "role": "servicenow-architect",
+        "provider": "manual",
+        "result": {
+          "mode": "manual",
+          "provider": "manual",
+          "prompt_file": "runs\\LAB-002\\architecture_required--servicenow-architect--manual.md"
+        }
+      }
+    },
+    {
+      "at": "2026-09-16T04:15:21.459356+00:00",
+      "event": "state_transition",
+      "details": {
+        "from": "architecture_required",
+        "to": "human_architecture_review",
+        "human_approved": false
+      }
+    },
+    {
+      "at": "2026-09-16T04:16:41.195602+00:00",
+      "event": "state_transition",
+      "details": {
+        "from": "human_architecture_review",
+        "to": "architecture_complete",
+        "human_approved": true
+      }
+    },
+    {
+      "at": "2026-09-16T04:17:03.295372+00:00",
+      "event": "state_transition",
+      "details": {
+        "from": "architecture_complete",
+        "to": "backlog_draft",
+        "human_approved": false
+      }
+    },
+    {
+      "at": "2026-09-16T04:17:24.344841+00:00",
+      "event": "agent_dispatch",
+      "details": {
+        "role": "backlog-engineer",
+        "provider": "manual",
+        "result": {
+          "mode": "manual",
+          "provider": "manual",
+          "prompt_file": "runs\\LAB-002\\backlog_draft--backlog-engineer--manual.md"
+        }
+      }
+    },
+    {
+      "at": "2026-09-16T04:17:39.016805+00:00",
+      "event": "agent_dispatch",
+      "details": {
+        "role": "backlog-engineer",
+        "provider": "manual",
+        "result": {
+          "mode": "manual",
+          "provider": "manual",
+          "prompt_file": "runs\\LAB-002\\backlog_draft--backlog-engineer--manual.md"
+        }
+      }
+    },
+    {
+      "at": "2026-09-16T04:20:24.663034+00:00",
+      "event": "state_transition",
+      "details": {
+        "from": "backlog_draft",
+        "to": "backlog_ready",
+        "human_approved": true
+      }
+    },
+    {
+      "at": "2026-09-16T04:20:53.287976+00:00",
+      "event": "agent_dispatch",
+      "details": {
+        "role": "portfolio-advisor",
+        "provider": "manual",
+        "result": {
+          "mode": "manual",
+          "provider": "manual",
+          "prompt_file": "runs\\LAB-002\\backlog_ready--portfolio-advisor--manual.md"
+        }
+      }
+    },
+    {
+      "at": "2026-09-16T04:24:12.116258+00:00",
+      "event": "state_transition",
+      "details": {
+        "from": "backlog_ready",
+        "to": "priority_review",
+        "human_approved": false
+      }
+    },
+    {
+      "at": "2026-09-16T04:24:56.038423+00:00",
+      "event": "state_transition",
+      "details": {
+        "from": "priority_review",
+        "to": "sprint_ready",
+        "human_approved": true
+      }
+    },
+    {
+      "at": "2026-09-16T04:25:19.274400+00:00",
+      "event": "state_transition",
+      "details": {
+        "from": "sprint_ready",
+        "to": "implementation_planning",
+        "human_approved": false
+      }
+    },
+    {
+      "at": "2026-09-16T04:25:40.956191+00:00",
+      "event": "agent_dispatch",
+      "details": {
+        "role": "implementation-planner",
+        "provider": "manual",
+        "result": {
+          "mode": "manual",
+          "provider": "manual",
+          "prompt_file": "runs\\LAB-002\\implementation_planning--implementation-planner--manual.md"
+        }
+      }
+    },
+    {
+      "at": "2026-09-16T04:48:31.248310+00:00",
+      "event": "state_transition",
+      "details": {
+        "from": "implementation_planning",
+        "to": "implementation",
+        "human_approved": true
+      }
+    },
+    {
+      "at": "2026-09-16T04:59:53.823680+00:00",
+      "event": "agent_dispatch",
+      "details": {
+        "role": "developer",
+        "provider": "manual",
+        "result": {
+          "mode": "manual",
+          "provider": "manual",
+          "prompt_file": "runs\\LAB-002\\implementation--developer--manual.md"
+        }
+      }
+    }
+  ]
+}

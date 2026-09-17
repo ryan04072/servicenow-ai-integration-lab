@@ -1,0 +1,6 @@
+{
+    "scope": "x_1863347_sdkpoc",
+    "scopeId": "8030a0355d864094908f5fee8afe08d0",
+    "name": "SDK Fluent POC",
+    "tsconfigPath": "./src/server/tsconfig.json"
+}
